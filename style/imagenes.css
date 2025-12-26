@@ -1,0 +1,19 @@
+
+body {
+    background-color: white;
+}
+
+
+/* Animación para el gradiente */
+.animate-gradient {
+    /* Hacemos el fondo gigante para poder moverlo */
+    background-size: 300% 300%;
+    /* La animación dura 8 segundos, es infinita y suave (ease) */
+    animation: gradient-move 8s ease infinite;
+}
+
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
