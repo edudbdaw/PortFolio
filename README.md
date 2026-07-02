@@ -1,36 +1,54 @@
-# 🚀 Eduardo Duran - Portfolio 2026
+# 🚀 Eduardo Duran — Portfolio 2026
 
-Welcome to my personal portfolio! This project showcases my journey and skills as a Full-Stack Developer (Student), featuring my projects and technical expertise.
+A premium, dark-themed personal portfolio showcasing my journey and skills as a Full-Stack Developer. Built with modern web technologies and designed to impress recruiters.
+
+🌐 **Live:** [edudbdaw.github.io/PortFolio](https://edudbdaw.github.io/PortFolio)
+
+## ✨ Features
+
+* **Dark Premium Theme** — Deep indigo/purple palette with glassmorphism cards
+* **Floating Navbar** — Glassmorphism navbar with blur that responds to scroll
+* **Language Switcher** — Toggle between English (EN) and Spanish (ES) with localStorage persistence
+* **Particle Animation** — Subtle floating particles on the hero section
+* **Scroll Animations** — Elements fade in as they enter the viewport (IntersectionObserver)
+* **Typewriter Intro** — Animated name reveal with gradient glow subtitle
+* **Responsive Design** — Optimized for mobile (dvh units), tablet, and desktop
+* **Mobile Parallax Fix** — Uses `100dvh` with fallbacks for smooth mobile scrolling
 
 ## 🛠️ Tech Stack
 
 **Backend & Languages:**
-* **PHP / Laravel**: MVC architecture and API development.
-* **Java**: Object-Oriented Programming.
-* **MySQL**: Database design and management.
-* **JavaScript (ES6+)**: Logic and DOM manipulation.
+* PHP / Laravel · Java · JavaScript (ES6+) · MySQL · PostgreSQL
 
 **Frontend & Styling:**
-* **HTML5 / CSS3**
-* **Tailwind CSS**: Utility-first framework (used in this portfolio).
-* **Bootstrap**: Responsive layout systems.
-* **SASS**: CSS Preprocessing.
+* HTML5 / CSS3 · SASS · Bootstrap · Tailwind CSS · Vue.js
 
-## ✨ Features
+**Tools & DevOps:**
+* Git · GitHub · Docker
 
-* **Sticky Scroll Navigation**: Smooth slide-like experience.
-* **Dynamic Animations**: Typewriter intro and "breathing" gradients.
-* **Responsive Design**: Optimized for mobile, tablet, and desktop.
-* **Project Cards**: Glassmorphism effect for project showcases.
+## 📂 Featured Projects
+
+| Project | Description | Tech |
+|---------|-------------|------|
+| **FUT — Remote Teaching Telescope** | Astronomy platform from Aarhus University for remote telescope control | PHP, JS, jQuery, PostgreSQL, MediaWiki |
+| **Mercadillos La Palma** | Local marketplace platform for La Palma (Gov. adoption planned) | Laravel 12, Livewire, Tailwind, MySQL |
+| **Los Simpson** | Character matching game | JavaScript, HTML/CSS |
+| **Librería de Juegos** | Video game catalog | PHP, MySQL, Tailwind |
+| **Notas Rápidas** | Quick note-taking app | JavaScript, HTML/CSS |
 
 ## 📦 How to Run
 
-Since this project uses **JavaScript Modules** (`type: "module"`), you cannot simply double-click the `index.html`.
+Since this project uses **JavaScript Modules** (`type: "module"`), you need a local server:
 
-1.  Clone or download this repository.
-2.  Open the folder in **VS Code**.
-3.  Install the **Live Server** extension.
-4.  Right-click on `index.html` and select **"Open with Live Server"**.
+1. Clone this repository
+2. Open the folder in **VS Code**
+3. Install the **Live Server** extension
+4. Right-click on `index.html` → **"Open with Live Server"**
+
+Or use Python:
+```bash
+python3 -m http.server 8080
+```
 
 ## 👤 Author
 
