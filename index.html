@@ -39,20 +39,116 @@
             </h3>
 
         </div>
-        <div class="sticky top-0 section-fullscreen flex flex-col items-center justify-center bg-gradient-to-br from-white to-indigo-300 text-black animate-gradient">
-            <h2 class="text-5xl font-black text-center lg:text-6xl text-indigo-950 tracking-widest">MI STACK</h2>
-            <div id="logos" class="flex flex-wrap mt-24 justify-center gap-8 grid-rows-4 my-7 bg-white/15 py-10 px-5 mx-5 rounded-lg shadow-2xl md:py-28 md:mx-28 lg:py-36 lg:px-24 lg:mx-40">
-                <img class="w-16 h-16 scale-125 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-150 transition-transform" src="img/php.svg" alt="php">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/Laravel.svg.png" alt="Laravel">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/js.png" alt="js">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/logo-mysql-170x115.png" alt="mysql">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/java2.png" alt="java">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/Bootstrap_logo.svg" alt="Bootstrap_logo">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/tailwindcss-mark.d52e9897.svg" alt="tailwind">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/html.png" alt="html">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/css-3.png" alt="css">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/sass.png" alt="sass">
-                <img class="w-16 h-16 md:w-20 md:h-20 object-contain hover:grayscale transition-all duration-300 hover:scale-125 transition-transform" src="img/Docker-Logos/docker-logos/SVG/docker-mark-blue.svg" alt="docker">
+        <div class="sticky top-0 section-scrollable flex flex-col items-center justify-start py-10 md:justify-center bg-gradient-to-br from-white to-indigo-300 text-black animate-gradient">
+            <h2 class="text-5xl font-black text-center lg:text-6xl text-indigo-950 tracking-widest mt-6">MI STACK</h2>
+            
+            <div class="w-full max-w-5xl mx-auto px-4 mt-8 md:mt-12 space-y-6 pb-8">
+                
+                <!-- Backend & Languages -->
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-5 shadow-lg">
+                    <h3 class="text-sm font-bold text-indigo-900 uppercase tracking-widest mb-4 text-center">Backend & Languages</h3>
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/php.svg" alt="PHP">
+                            <span class="text-xs font-semibold text-indigo-900">PHP</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/Laravel.svg.png" alt="Laravel">
+                            <span class="text-xs font-semibold text-indigo-900">Laravel</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/java2.png" alt="Java">
+                            <span class="text-xs font-semibold text-indigo-900">Java</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/js.png" alt="JavaScript">
+                            <span class="text-xs font-semibold text-indigo-900">JavaScript</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/logo-mysql-170x115.png" alt="MySQL">
+                            <span class="text-xs font-semibold text-indigo-900">MySQL</span>
+                        </div>
+                        <!-- PostgreSQL (inline SVG) -->
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <svg class="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 432.071 445.383" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M323.205,324.227c2.833-23.601,1.984-27.062,19.563-23.239l4.463,0.392c13.517,0.615,31.199-2.174,41.587-7c22.362-10.376,35.622-27.7,13.572-23.148c-50.297,10.376-53.755-6.655-53.755-6.655c53.111-78.803,75.313-178.836,56.149-203.322C352.514-5.534,262.036,26.049,260.522,26.869l-0.482,0.089c-9.938-2.062-21.06-3.294-33.554-3.496c-22.761-0.374-40.032,5.967-53.133,15.904c0,0-161.408-66.498-153.899,83.628c1.597,31.936,45.777,241.655,98.47,178.31c19.259-23.163,37.871-42.748,37.871-42.748c9.242,6.14,20.307,9.272,31.912,8.147l0.897-0.765c-0.281,2.876-0.157,5.689,0.359,9.019c-13.572,15.167-9.584,17.83-36.723,23.416c-27.457,5.659-11.326,15.734-0.797,18.367c12.768,3.193,42.305,7.716,62.268-20.224l-0.795,3.188c5.325,4.26,4.965,30.619,5.72,49.452c0.756,18.834,2.017,36.409,5.856,46.771c3.839,10.36,8.369,37.05,44.036,29.406c29.809-6.388,52.6-15.582,54.677-101.107" style="fill:#336791;stroke:none"/>
+                                    <path d="M402.395,271.23c-50.302,10.376-53.76-6.655-53.76-6.655c53.111-78.808,75.313-178.843,56.153-203.326c-52.27-66.785-142.752-35.2-144.262-34.38l-0.486,0.087c-9.938-2.063-21.06-3.292-33.56-3.496c-22.761-0.373-40.026,5.967-53.127,15.902c0,0-161.411-66.495-153.904,83.63c1.597,31.938,45.776,241.657,98.471,178.312c19.26-23.163,37.869-42.748,37.869-42.748c9.243,6.14,20.308,9.272,31.908,8.147l0.901-0.765c-0.281,2.876-0.152,5.689,0.361,9.019c-13.575,15.167-9.586,17.83-36.723,23.416c-27.459,5.659-11.328,15.734-0.796,18.367c12.768,3.193,42.307,7.716,62.266-20.224l-0.796,3.188c5.319,4.26,9.054,27.711,8.428,48.969c-0.626,21.259-1.044,35.854,3.147,47.254c4.191,11.4,8.368,37.05,44.042,29.406c29.809-6.388,45.256-22.942,47.405-50.555c1.525-19.631,4.976-16.729,5.194-34.28l2.768-8.309c3.192-26.611,0.507-35.196,18.872-31.203l4.463,0.392c13.517,0.615,31.208-2.174,41.591-7c22.358-10.376,35.618-27.7,13.573-23.148z" style="fill:#336791;stroke:none"/>
+                                    <path d="M215.866,286.484c-1.385,49.516,0.348,99.377,5.193,111.495c4.848,12.118,15.223,35.688,50.9,28.045c29.806-6.39,40.651-18.756,45.357-46.051c3.466-20.082,10.148-75.854,11.005-87.281" style="fill:#ffffff;stroke:none"/>
+                                    <path d="M173.104,38.256c0,0-161.521-66.016-154.012,84.109c1.597,31.938,45.779,241.664,98.473,178.316c19.256-23.166,36.671-41.335,36.671-41.335" style="fill:none;stroke:#336791;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:round"/>
+                                    <path d="M260.349,26.207c-5.591,1.753,89.848-34.889,144.087,34.417c19.159,24.484-3.043,124.519-56.153,203.329" style="fill:none;stroke:#336791;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:round"/>
+                                    <path d="M348.282,263.953c0,0,3.461,17.036,53.764,6.653c22.04-4.552,8.776,12.774-13.577,23.155c-18.345,8.514-59.474,10.696-60.146-1.069c-1.729-30.355,21.647-21.133,19.96-28.739c-1.525-6.85-11.979-13.573-18.894-30.338c-6.037-14.633-82.796-126.849,21.287-110.183c3.813-0.789-27.146-99.002-124.553-100.599c-97.385-1.597-94.19,119.762-94.19,119.762" style="fill:none;stroke:#336791;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:round"/>
+                                    <path d="M188.604,274.334c-13.577,15.166-9.584,17.829-36.723,23.417c-27.459,5.66-11.326,15.733-0.797,18.365c12.768,3.195,42.307,7.718,62.266-20.229c6.078-8.509-0.036-22.086-24.746-21.553z" style="fill:#ffffff;stroke:#336791;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:round"/>
+                                    <path d="M348.282,263.953c-1.688-7.69-11.979-13.573-18.894-30.338c-6.037-14.633-82.796-126.849,21.287-110.183c3.154-0.508,5.504-0.96,7.171-1.371c-10.334-7.457-24.976-12.783-47.915-10.049c-56.477,6.737-44.478,65.32-10.985,106.464c10.07,12.362,6.994,23.834,0.803,34.668" style="fill:none;stroke:#336791;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:round"/>
+                                    <path d="M270.069,288.489c0.803,5.108,0.478,20.187-2.31,45.033c-4.844,43.104-10.399,74.017-45.387,46.158c-5.349-4.26-10.59-14.108-12.423-22.432" style="fill:none;stroke:#336791;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:miter"/>
+                                    <path d="M270.069,288.489c2.833-23.601,1.984-27.062,19.563-23.239c19.846,4.317,35.327,2.085,42.05-6.395" style="fill:none;stroke:#336791;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:round"/>
+                                </g>
+                            </svg>
+                            <span class="text-xs font-semibold text-indigo-900">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend & Styling -->
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-5 shadow-lg">
+                    <h3 class="text-sm font-bold text-indigo-900 uppercase tracking-widest mb-4 text-center">Frontend & Styling</h3>
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/html.png" alt="HTML5">
+                            <span class="text-xs font-semibold text-indigo-900">HTML5</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/css-3.png" alt="CSS3">
+                            <span class="text-xs font-semibold text-indigo-900">CSS3</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/sass.png" alt="SASS">
+                            <span class="text-xs font-semibold text-indigo-900">SASS</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/Bootstrap_logo.svg" alt="Bootstrap">
+                            <span class="text-xs font-semibold text-indigo-900">Bootstrap</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/tailwindcss-mark.d52e9897.svg" alt="Tailwind CSS">
+                            <span class="text-xs font-semibold text-indigo-900">Tailwind</span>
+                        </div>
+                        <!-- Vue.js (inline SVG) -->
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <svg class="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 261.76 226.69" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M161.096.001l-30.225 52.351L100.647.001H0l130.871 226.69L261.762.001z" fill="#41b883"/>
+                                <path d="M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z" fill="#34495e"/>
+                            </svg>
+                            <span class="text-xs font-semibold text-indigo-900">Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & DevOps -->
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-5 shadow-lg">
+                    <h3 class="text-sm font-bold text-indigo-900 uppercase tracking-widest mb-4 text-center">Tools & DevOps</h3>
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                        <!-- Git (inline SVG) -->
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <svg class="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M251.172 116.594L139.4 4.828c-6.433-6.437-16.873-6.437-23.314 0l-23.21 23.21 29.443 29.443c6.842-2.312 14.688-.761 20.142 4.693 5.48 5.489 7.02 13.402 4.652 20.266l28.375 28.376c6.865-2.365 14.786-.835 20.269 4.657 7.663 7.66 7.663 20.075 0 27.74-7.665 7.666-20.08 7.666-27.749 0-5.764-5.77-7.188-14.235-4.27-21.336l-26.462-26.462-.003 69.637c1.871.907 3.628 2.09 5.186 3.649 7.66 7.66 7.66 20.076 0 27.747-7.665 7.662-20.086 7.662-27.74 0-7.663-7.671-7.663-20.086 0-27.746 1.97-1.966 4.255-3.428 6.7-4.354v-70.25c-2.445-.926-4.727-2.39-6.7-4.357-5.8-5.8-7.212-14.317-4.227-21.446L81.47 39.442l-76.64 76.635c-6.44 6.443-6.44 16.884 0 23.322l111.774 111.768c6.435 6.438 16.873 6.438 23.316 0l111.251-111.249c6.438-6.44 6.438-16.887 0-23.324" fill="#DE4C36"/>
+                            </svg>
+                            <span class="text-xs font-semibold text-indigo-900">Git</span>
+                        </div>
+                        <!-- GitHub (inline SVG) -->
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <svg class="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/>
+                            </svg>
+                            <span class="text-xs font-semibold text-indigo-900">GitHub</span>
+                        </div>
+                        <div class="tech-icon flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300">
+                            <img class="w-12 h-12 md:w-16 md:h-16 object-contain" src="img/Docker-Logos/docker-logos/SVG/docker-mark-blue.svg" alt="Docker">
+                            <span class="text-xs font-semibold text-indigo-900">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
         <div class="sticky top-0 section-scrollable pb-8 flex flex-col items-center justify-start pt-8 md:justify-center bg-gradient-to-br from-green-100 to-indigo-300 text-black animate-gradient">
