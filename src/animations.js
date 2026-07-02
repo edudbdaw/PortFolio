@@ -84,6 +84,10 @@ const translations = {
         contactText: "I'm always open to new opportunities and collaborations. Let's connect!",
         visitProject: '🔭 Visit Project',
         liveDemo: '🌐 Live Demo',
+        certsTitle: 'Certifications',
+        azureCert: 'AZ-900 Fundamentals',
+        ciscoCert: 'Certified Support Technician',
+        pythonCert: 'Certified Developer'
     },
     es: {
         navAbout: 'Sobre mí',
@@ -109,6 +113,10 @@ const translations = {
         contactText: 'Siempre estoy abierto a nuevas oportunidades y colaboraciones. ¡Conectemos!',
         visitProject: '🔭 Ver Proyecto',
         liveDemo: '🌐 Demo en Vivo',
+        certsTitle: 'Certificaciones',
+        azureCert: 'AZ-900 Fundamentals',
+        ciscoCert: 'Técnico de Soporte Certificado',
+        pythonCert: 'Desarrollador Certificado'
     }
 };
 
@@ -149,10 +157,42 @@ function initLanguageSwitcher() {
     setLanguage(currentLang);
 }
 
+// ===== Smooth Section Fade =====
+function initSectionFade() {
+    const sections = document.querySelectorAll('.section-scrollable, .section-fullscreen');
+    
+    window.addEventListener('scroll', () => {
+        const viewportHeight = window.innerHeight;
+        
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            
+            // If the section is sliding up and its top is within the viewport
+            if (rect.top > 0 && rect.top < viewportHeight) {
+                // Progress goes from 0 (at bottom of screen) to 1 (at top of screen)
+                const progress = 1 - (rect.top / viewportHeight);
+                // Opacity fades from 0.1 to 1.0 smoothly
+                const opacity = 0.1 + (progress * 0.9);
+                section.style.opacity = Math.min(opacity, 1);
+            } else if (rect.top <= 0) {
+                // Fully visible when top is at or above viewport top
+                section.style.opacity = 1;
+            } else {
+                // Below viewport
+                section.style.opacity = 0.1;
+            }
+        });
+    }, { passive: true });
+    
+    // Trigger initially
+    setTimeout(() => window.dispatchEvent(new Event('scroll')), 100);
+}
+
 // ===== Initialize Everything =====
 export function initAnimations() {
     initScrollReveal();
     initNavbar();
     initParticles();
     initLanguageSwitcher();
+    initSectionFade();
 }
