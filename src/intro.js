@@ -1,20 +1,14 @@
-
 export function playIntro() {
-    
-    
     const textElement = document.getElementById('typewriter-text');
-    //Create the object typewriter and config it 
     const typewriter = new Typewriter(textElement, {
         loop: true,   
-        delay: 85,     // Write speed
+        delay: 85,
     });
 
-    // 4. CREAR LA SECUENCIA DE ANIMACIÓN
     typewriter
-        .typeString('Eduardo Duran') // First String , name
-        .pauseFor(500)               // Pause
-        .typeString('<br><h2 style="color: #34d399 ; font-size:45px; margin-top:2vh">Full Stack Developer</h2>') // Second String
-        .pauseFor(2000)              // Pause
-        
-        .start(); //IMPORTANT , without this , doesnt work
+        .typeString('Eduardo Duran')
+        .pauseFor(500)
+        .typeString('<br><span class="glow-text" style="font-size: clamp(1.5rem, 4vw, 3.5rem); font-weight: 700;">Full Stack Developer</span>')
+        .pauseFor(2000)
+        .start();
 }

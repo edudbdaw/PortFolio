@@ -1,9 +1,7 @@
-
 import { playIntro } from './intro.js';
+import { initAnimations } from './animations.js';
 
-// Waiting for load completly for call the function
 document.addEventListener('DOMContentLoaded', () => {
-    
     playIntro();
+    initAnimations();
 });
-
