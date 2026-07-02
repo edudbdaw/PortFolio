@@ -3,12 +3,51 @@ body {
     background-color: white;
 }
 
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+    /* Prevent overscroll bounce on iOS */
+    overscroll-behavior: none;
+}
 
-/* Animación para el gradiente */
+/* ===== Mobile Parallax Fix ===== */
+/* Use dynamic viewport height (dvh) with fallback for older browsers */
+.section-fullscreen {
+    min-height: 100vh;           /* Fallback for older browsers */
+    min-height: 100dvh;          /* Dynamic viewport height — adapts to mobile browser chrome */
+}
+
+/* Hero section should be exactly viewport height, no overflow */
+.section-hero {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+/* Sections with potentially overflowing content (About Me) */
+.section-scrollable {
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;  /* Smooth momentum scrolling on iOS */
+}
+
+/* Fix for iOS Safari sticky behavior */
+@supports (-webkit-touch-callout: none) {
+    .section-fullscreen,
+    .section-hero,
+    .section-scrollable {
+        /* iOS-specific: use -webkit-fill-available as another fallback */
+        min-height: -webkit-fill-available;
+    }
+    .section-hero {
+        height: -webkit-fill-available;
+    }
+}
+
+/* ===== Gradient Animation ===== */
 .animate-gradient {
-    /* Hacemos el fondo gigante para poder moverlo */
     background-size: 300% 300%;
-    /* La animación dura 8 segundos, es infinita y suave (ease) */
     animation: gradient-move 8s ease infinite;
 }
 
