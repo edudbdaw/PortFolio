@@ -1,57 +1,65 @@
-# 🚀 Eduardo Duran — Portfolio 2026
+# 🚀 Eduardo Duran — Full-Stack Web Developer Portfolio
 
-A premium, dark-themed personal portfolio showcasing my journey and skills as a Full-Stack Developer. Built with modern web technologies and designed to impress recruiters.
+An interactive, high-craft developer portfolio designed to showcase production-ready web engineering capabilities, full-stack architecture, and real-world project impact to **IT consultancies, tech agencies, and clients**.
 
-🌐 **Live:** [edudbdaw.github.io/PortFolio](https://edudbdaw.github.io/PortFolio)
+🌐 **Live Portfolio:** [edudbdaw.github.io/PortFolio](https://edudbdaw.github.io/PortFolio)
 
-## ✨ Features
+---
 
-* **Dark Premium Theme** — Deep indigo/purple palette with glassmorphism cards
-* **Floating Navbar** — Glassmorphism navbar with blur that responds to scroll
-* **Language Switcher** — Toggle between English (EN) and Spanish (ES) with localStorage persistence
-* **Particle Animation** — Subtle floating particles on the hero section
-* **Scroll Animations** — Elements fade in as they enter the viewport (IntersectionObserver)
-* **Typewriter Intro** — Animated name reveal with gradient glow subtitle
-* **Responsive Design** — Optimized for mobile (dvh units), tablet, and desktop
-* **Mobile Parallax Fix** — Uses `100dvh` with fallbacks for smooth mobile scrolling
+## ✨ Features & Architecture
 
-## 🛠️ Tech Stack
+* **Production-Ready Positioning** — Highlights practical execution as a **Higher Technician in Web Application Development (DAW)** with international impact and government-grade solutions.
+* **🔍 Interactive System Architecture Inspector** — Modal node graph allowing tech leads and recruiters to inspect backend API routes, database schemas, and socket connections for featured projects.
+* **📱 Interactive Project Simulator** — Tabbed role preview modal (Customer View, Vendor Dashboard, Admin Management) simulating multi-tenant web platforms.
+* **⚡ Interactive Tech Capability Matrix** — Filterable tech grid (Backend & DB, Frontend & UI, DevOps & Tools) linking technologies to real-world projects.
+* **🌐 Bilingual Engine (EN / ES)**: Seamless language switcher with persistent local storage.
+* **🌌 High-Craft Dark Studio Aesthetic**: Deep slate navy theme (`#070c18`), vibrant cyan/violet accents, particle star canvas, and responsive glassmorphism.
 
-**Backend & Languages:**
-* PHP / Laravel · Java · JavaScript (ES6+) · MySQL · PostgreSQL
+---
 
-**Frontend & Styling:**
-* HTML5 / CSS3 · SASS · Bootstrap · Tailwind CSS · Vue.js
+## 🛠️ Core Technology Stack
 
-**Tools & DevOps:**
-* Git · GitHub · Docker
+- **Backend & Languages**: PHP 8.4, Laravel 12, Python, Java, JavaScript (ES6+), MySQL 8, PostgreSQL 15
+- **Frontend & Styling**: Vue.js, Livewire, Tailwind CSS, Bootstrap, HTML5, SASS / Custom CSS
+- **DevOps & Tools**: Docker, Git, GitHub
+- **Certifications**:
+  - ☁️ **Microsoft Azure Fundamentals** (AZ-900)
+  - 🔒 **Cisco Support Technician** (Cybersecurity Certified)
+  - 🐍 **Certified Python Developer**
 
-## 📂 Featured Projects
+---
 
-| Project | Description | Tech |
-|---------|-------------|------|
-| **FUT — Remote Teaching Telescope** | Astronomy platform from Aarhus University for remote telescope control | PHP, JS, jQuery, PostgreSQL, MediaWiki |
-| **Mercadillos La Palma** | Local marketplace platform for La Palma (Gov. adoption planned) | Laravel 12, Livewire, Tailwind, MySQL |
-| **Los Simpson** | Character matching game | JavaScript, HTML/CSS |
-| **Librería de Juegos** | Video game catalog | PHP, MySQL, Tailwind |
-| **Notas Rápidas** | Quick note-taking app | JavaScript, HTML/CSS |
+## 📂 Featured Enterprise & International Projects
 
-## 📦 How to Run
+1. **FUT — Remote Telescope Control Platform** *(Aarhus University, Denmark / Mt. Kent Observatory, Australia)*
+   - Full-stack web system allowing university students to remotely control a 60cm reflecting telescope in Australia.
+   - Tech: PHP 8, JavaScript, PostgreSQL, Socket TCP, MediaWiki API.
 
-Since this project uses **JavaScript Modules** (`type: "module"`), you need a local server:
+2. **Mercadillos La Palma — Market Digitalization Platform** *(Government Adoption Plan, La Palma)*
+   - Multi-tenant e-commerce and logistics management platform for local agricultural markets.
+   - Tech: Laravel 12, Livewire, Tailwind CSS, MySQL.
 
-1. Clone this repository
-2. Open the folder in **VS Code**
-3. Install the **Live Server** extension
-4. Right-click on `index.html` → **"Open with Live Server"**
+---
 
-Or use Python:
+## 💻 How to Run Locally
+
+Since the portfolio uses **ES Modules** (`type="module"`), run a local HTTP server:
+
 ```bash
+# Python 3
 python3 -m http.server 8080
+
+# Or using Node npx
+npx serve .
 ```
+
+Open [http://localhost:8080](http://localhost:8080) in your browser.
+
+---
 
 ## 👤 Author
 
-**Eduardo Duran**
-* [GitHub](https://github.com/edudbdaw)
+**Eduardo Duran** — Full-Stack Web Developer (DAW)
 * [LinkedIn](https://www.linkedin.com/in/eduardo-duran-banegas-87b126371/)
+* [GitHub](https://github.com/edudbdaw)
+* [Email](mailto:edudbdaw@gmail.com)
