@@ -186,19 +186,19 @@ body {
 /* ===== Layout ===== */
 .section {
   position: relative;
-  padding: 80px 24px;
+  padding: 64px 24px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .section-hero {
-  min-height: 90vh;
-  min-height: 90dvh;
+  min-height: 75vh;
+  min-height: 75dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 /* ===== Profile Photo Avatar ===== */
@@ -473,7 +473,7 @@ body {
 
 /* ===== Section Header ===== */
 .section-header {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .section-tag {
@@ -791,7 +791,7 @@ body {
 /* ===== Responsive ===== */
 @media (max-width: 640px) {
   .section {
-    padding: 60px 16px;
+    padding: 48px 16px;
   }
   .project-content {
     padding: 20px;

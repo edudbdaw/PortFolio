@@ -3,8 +3,6 @@
  */
 
 import { setLanguage, getLanguage } from './i18n.js';
-import { openArchitectureModal } from './architectureInspector.js';
-import { openSimulatorModal } from './projectSimulator.js';
 
 export function initCommandPalette() {
   const modal = document.getElementById('cmdPaletteModal');
@@ -98,21 +96,6 @@ function renderCommandList(query) {
       label: lang === 'es' ? 'Ir a Certificaciones' : 'Go to Certifications',
       shortcut: 'SECTION',
       action: () => { window.location.hash = '#certs'; closeCommandPalette(); }
-    },
-    {
-      label: lang === 'es' ? 'Inspeccionar Arquitectura (FUT)' : 'Inspect Architecture (FUT)',
-      shortcut: 'MODAL',
-      action: () => { closeCommandPalette(); openArchitectureModal('fut'); }
-    },
-    {
-      label: lang === 'es' ? 'Inspeccionar Arquitectura (Mercadillos)' : 'Inspect Architecture (Mercadillos)',
-      shortcut: 'MODAL',
-      action: () => { closeCommandPalette(); openArchitectureModal('mercadillo'); }
-    },
-    {
-      label: lang === 'es' ? 'Simulador interactivo de roles' : 'Interactive Role Simulator',
-      shortcut: 'SIMULATOR',
-      action: () => { closeCommandPalette(); openSimulatorModal('mercadillo'); }
     },
     {
       label: lang === 'es' ? 'Cambiar a Español' : 'Switch to Spanish',
