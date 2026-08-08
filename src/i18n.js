@@ -87,6 +87,13 @@ const translations = {
     contactTitle: "Let's connect",
     contactDesc: 'Looking for a reliable Full-Stack Developer for your consultancy, agency, or software team? Reach out directly.',
     copyEmail: 'Copy Email Address',
+    btnSendMessage: 'Send Message',
+    contactModalTitle: 'Send a Direct Message',
+    contactModalDesc: 'Fill in your details below to send a message directly to Eduardo.',
+    labelName: 'Your Name',
+    labelEmail: 'Your Email',
+    labelMessage: 'Message',
+    btnSubmitMessage: 'Send Message',
     footerRights: 'All rights reserved.'
   },
 
@@ -173,6 +180,13 @@ const translations = {
     contactTitle: 'Hablemos de tu proyecto',
     contactDesc: '¿Buscas un Desarrollador Full-Stack para tu consultora, agencia o equipo de software? Contacta directamente.',
     copyEmail: 'Copiar Correo',
+    btnSendMessage: 'Enviar Mensaje',
+    contactModalTitle: 'Enviar Mensaje Directo',
+    contactModalDesc: 'Rellena tus datos a continuación para enviar un mensaje directo a Eduardo.',
+    labelName: 'Tu Nombre',
+    labelEmail: 'Tu Correo',
+    labelMessage: 'Mensaje',
+    btnSubmitMessage: 'Enviar Mensaje',
     footerRights: 'Todos los derechos reservados.'
   }
 };
@@ -200,6 +214,18 @@ export function updateDOMTexts() {
       el.textContent = dict[key];
     }
   });
+
+  // Dynamic CV Download link per language
+  const cvBtn = document.getElementById('downloadCvBtn');
+  if (cvBtn) {
+    if (currentLang === 'es') {
+      cvBtn.href = 'media/cv/Eduardo_Duran_CV_ES.docx';
+      cvBtn.download = 'Eduardo_Duran_CV_ES.docx';
+    } else {
+      cvBtn.href = 'media/cv/Eduardo_Duran_CV_EN.docx';
+      cvBtn.download = 'Eduardo_Duran_CV_EN.docx';
+    }
+  }
 }
 
 function updateActiveButtons() {

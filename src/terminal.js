@@ -150,8 +150,7 @@ function executeCommand(cmd) {
         <div class="terminal-response">
           <p><span style="color: #4ade80;">1. FUT Remote Telescope</span> — Aarhus University (Denmark/Australia) [PHP, Postgres, Sockets]</p>
           <p><span style="color: #4ade80;">2. Mercadillos La Palma</span> — Cabildo de La Palma Adoption Plan [Laravel 12, Livewire, MySQL]</p>
-          <p><span style="color: #a1a1aa;">3. Los Simpson Matcher</span> — JavaScript State Matching Game</p>
-          <p><span style="color: #a1a1aa;">4. Game Catalog Platform</span> — PHP 8, Relational MySQL & Tailwind</p>
+          <p><span style="color: #4ade80;">3. 90Sleep App</span> — R90 Sleep Cycle Alarm App [Flutter, Dart, Closed Beta]</p>
         </div>
       `;
       break;
@@ -190,15 +189,17 @@ function executeCommand(cmd) {
     case 'cat cv':
     case 'cat resume':
     case 'cv':
+      const cvFile = lang === 'es' ? 'Eduardo_Duran_CV_ES.docx' : 'Eduardo_Duran_CV_EN.docx';
+      const cvPath = `media/cv/${cvFile}`;
       responseHTML = `
         <div class="terminal-response">
-          <p style="color: #4ade80;">[SYSTEM]: Triggering resume download (eduardoDuranCV.pdf)...</p>
+          <p style="color: #4ade80;">[SYSTEM]: Triggering resume download (${cvFile})...</p>
         </div>
       `;
       // Trigger download
       const link = document.createElement('a');
-      link.href = 'media/eduardoDuranCV.pdf';
-      link.download = 'eduardoDuranCV.pdf';
+      link.href = cvPath;
+      link.download = cvFile;
       link.click();
       break;
 

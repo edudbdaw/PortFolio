@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scrollProgressBar" class="scroll-progress-bar"></div>
 
   <!-- ===== Floating Navbar ===== -->
   <div class="navbar-container">
@@ -65,7 +67,7 @@
         <!-- CTA Action Buttons -->
         <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 8px;">
           <a href="#projects" class="btn btn-primary" data-i18n="btnProjects">View Projects</a>
-          <a href="media/eduardoDuranCV.pdf" download class="btn btn-secondary">
+          <a href="media/cv/Eduardo_Duran_CV_EN.docx" download="Eduardo_Duran_CV_EN.docx" id="downloadCvBtn" class="btn btn-secondary">
             <svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span data-i18n="btnCV">Download CV</span>
           </a>
@@ -85,7 +87,7 @@
         <!-- Profile Picture & Location Badge -->
         <div class="profile-avatar-container">
           <div class="profile-avatar-wrapper">
-            <img src="img/miphoto.PNG" alt="Eduardo Duran" class="profile-avatar-img">
+            <img src="img/miphoto.PNG" alt="Eduardo Duran" class="profile-avatar-img" loading="lazy" decoding="async">
           </div>
           <div>
             <span class="section-tag" data-i18n="aboutTag">BACKGROUND & EXPERIENCE</span>
@@ -179,7 +181,7 @@
         <!-- Project 1: FUT Telescope -->
         <div class="project-card-featured glass-card-hover reveal">
           <div class="project-img-wrapper">
-            <img src="img/projectos/fut.png" alt="FUT Remote Telescope" class="project-img">
+            <img src="img/projectos/fut.png" alt="FUT Remote Telescope" class="project-img" loading="lazy" decoding="async">
           </div>
           <div class="project-content">
             <div>
@@ -202,14 +204,6 @@
             </div>
 
             <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-              <button class="btn btn-secondary btn-sm" data-action="case-study" data-project="fut">
-                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                <span>Case Study</span>
-              </button>
-              <button class="btn btn-secondary btn-sm" data-action="inspect-arch" data-project="fut">
-                <svg class="icon-svg" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                <span data-i18n="inspectArchBtn">Architecture Diagram</span>
-              </button>
               <a href="https://fut.au.dk" target="_blank" class="btn btn-secondary btn-sm">
                 <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Visit Site
@@ -221,7 +215,7 @@
         <!-- Project 2: Mercadillos La Palma -->
         <div class="project-card-featured glass-card-hover reveal">
           <div class="project-img-wrapper">
-            <img src="img/projectos/mercadillo.png" alt="Mercadillos La Palma" class="project-img">
+            <img src="img/projectos/mercadillo.png" alt="Mercadillos La Palma" class="project-img" loading="lazy" decoding="async">
           </div>
           <div class="project-content">
             <div>
@@ -244,18 +238,6 @@
             </div>
 
             <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-              <button class="btn btn-secondary btn-sm" data-action="case-study" data-project="mercadillo">
-                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                <span>Case Study</span>
-              </button>
-              <button class="btn btn-secondary btn-sm" data-action="inspect-arch" data-project="mercadillo">
-                <svg class="icon-svg" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                <span data-i18n="inspectArchBtn">Architecture Diagram</span>
-              </button>
-              <button class="btn btn-secondary btn-sm" data-action="simulate-demo" data-project="mercadillo">
-                <svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                <span data-i18n="simulateDemoBtn">Interactive Preview</span>
-              </button>
               <a href="https://mercadilloslapalma.departamentoinformaticajmpp.com" target="_blank" class="btn btn-secondary btn-sm">
                 <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Live Demo
@@ -266,8 +248,8 @@
 
         <!-- Project 3: 90Sleep -->
         <div class="project-card-featured glass-card-hover reveal">
-          <div class="project-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); padding: 16px;">
-            <img src="img/projectos/90sleep.png" alt="90Sleep App" class="project-img" style="max-height: 240px; width: auto; object-fit: contain;">
+          <div class="project-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); padding: 20px;">
+            <img src="img/projectos/app_icon_512x512.png" alt="90Sleep App" class="project-img" style="max-height: 160px; width: auto; object-fit: contain; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);" loading="lazy" decoding="async">
           </div>
           <div class="project-content">
             <div>
@@ -294,65 +276,9 @@
         </div>
 
       </div>
-
-      <!-- Secondary Projects Grid -->
-      <div class="sub-projects-grid">
-        
-        <!-- Los Simpson Matcher -->
-        <div class="glass-card glass-card-hover sub-project-card reveal">
-          <div>
-            <span class="badge" style="margin-bottom: 8px;">JavaScript Game</span>
-            <h4 style="font-size: 1.05rem; font-weight: 600; color: #fff;" data-i18n="simpsonsTitle">Los Simpson Matcher</h4>
-            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 6px;" data-i18n="simpsonsDesc">
-              Interactive memory matching game built with vanilla JS and CSS flex grid.
-            </p>
-          </div>
-          <div style="margin-top: 14px;">
-            <a href="https://github.com/edudbdaw/JUEGO-PAREJAS-LOS-SIMPSONS" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              View on GitHub
-            </a>
-          </div>
-        </div>
-
-        <!-- Game Catalog -->
-        <div class="glass-card glass-card-hover sub-project-card reveal">
-          <div>
-            <span class="badge" style="margin-bottom: 8px;">PHP & MySQL</span>
-            <h4 style="font-size: 1.05rem; font-weight: 600; color: #fff;" data-i18n="libreriaTitle">Game Catalog Platform</h4>
-            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 6px;" data-i18n="libreriaDesc">
-              Video game catalog application with PHP PDO, SQL filtering, and Tailwind.
-            </p>
-          </div>
-          <div style="margin-top: 14px;">
-            <a href="https://github.com/edudbdaw/Web-Catalogo-VideoJuegos-PHP-MYSQL-HTML-TAILWIND" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              View on GitHub
-            </a>
-          </div>
-        </div>
-
-        <!-- Fast Notes -->
-        <div class="glass-card glass-card-hover sub-project-card reveal">
-          <div>
-            <span class="badge" style="margin-bottom: 8px;">Web App</span>
-            <h4 style="font-size: 1.05rem; font-weight: 600; color: #fff;" data-i18n="notasTitle">Fast Notes App</h4>
-            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 6px;" data-i18n="notasDesc">
-              Web application for quick notes with local state persistence.
-            </p>
-          </div>
-          <div style="margin-top: 14px;">
-            <a href="https://github.com/edudbdaw/NotasRapidas" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              View on GitHub
-            </a>
-          </div>
-        </div>
-
-      </div>
     </section>
 
-    <!-- ===== TECH STACK & SQL PLAYGROUND SECTION ===== -->
+    <!-- ===== TECH STACK SECTION ===== -->
     <section id="stack" class="section">
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="stackTag">CAPABILITIES</span>
@@ -369,9 +295,6 @@
 
       <!-- Matrix Container -->
       <div id="stackMatrixGrid" class="stack-grid reveal"></div>
-
-      <!-- SQL & Eloquent Query Playground -->
-      <div id="sqlPlaygroundGrid" style="margin-top: 32px;"></div>
     </section>
 
     <!-- ===== CERTIFICATIONS SECTION ===== -->
@@ -437,7 +360,11 @@
         </p>
 
         <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-          <button id="copyEmailBtn" class="btn btn-primary">
+          <button id="openContactModalBtn" class="btn btn-primary">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            <span data-i18n="btnSendMessage">Send Message</span>
+          </button>
+          <button id="copyEmailBtn" class="btn btn-secondary">
             <svg class="icon-svg" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             <span class="btn-label" data-i18n="copyEmail">Copy Email Address</span>
           </button>
@@ -466,46 +393,37 @@
     </div>
   </div>
 
-  <!-- ===== CASE STUDY SLIDE-OVER DRAWER MODAL ===== -->
-  <div id="caseStudyDrawerModal" class="modal-overlay">
-    <div class="modal-container" style="max-width: 640px; margin-left: auto; height: 100vh; max-height: 100vh; border-radius: 0; border-left: 1px solid var(--border-subtle);">
-      <div id="caseStudyDrawerContent" style="padding: 24px; overflow-y: auto; max-height: 100%;"></div>
-    </div>
-  </div>
-
-  <!-- ===== ARCHITECTURE MODAL ===== -->
-  <div id="architectureModal" class="modal-overlay">
-    <div class="modal-container">
+  <!-- ===== DIRECT CONTACT FORM MODAL ===== -->
+  <div id="contactModal" class="modal-overlay">
+    <div class="modal-container" style="max-width: 520px; padding: 24px;">
       <button class="modal-close-btn">&times;</button>
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-        <span class="badge">Architecture Inspector</span>
-      </div>
-      <h3 id="archModalTitle" style="font-size: 1.25rem; font-weight: 700; color: #fff;"></h3>
-      <p id="archModalSub" style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono); margin-top: 2px;"></p>
-      <p id="archModalDesc" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;"></p>
+      <h3 style="font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 6px;" data-i18n="contactModalTitle">Send a Direct Message</h3>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 18px;" data-i18n="contactModalDesc">
+        Fill in your details below to send a message directly to Eduardo.
+      </p>
 
-      <div id="archNodeGraph" class="node-graph"></div>
+      <form id="contactForm" style="display: flex; flex-direction: column; gap: 14px;">
+        <div>
+          <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 6px; display: block;" data-i18n="labelName">Your Name</label>
+          <input type="text" id="contactName" required placeholder="John Doe" class="cmd-palette-input" style="padding: 10px 14px; font-size: 0.88rem;">
+        </div>
 
-      <div style="margin-top: 16px;">
-        <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-mono);">Execution Logic:</span>
-        <pre id="archCodeSnippet" class="code-snippet-box"></pre>
-      </div>
-    </div>
-  </div>
+        <div>
+          <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 6px; display: block;" data-i18n="labelEmail">Your Email</label>
+          <input type="email" id="contactEmail" required placeholder="john@example.com" class="cmd-palette-input" style="padding: 10px 14px; font-size: 0.88rem;">
+        </div>
 
-  <!-- ===== SIMULATOR MODAL ===== -->
-  <div id="simulatorModal" class="modal-overlay">
-    <div class="modal-container">
-      <button class="modal-close-btn">&times;</button>
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-        <span class="badge">Role Simulator</span>
-      </div>
-      <h3 id="simModalTitle" style="font-size: 1.25rem; font-weight: 700; color: #fff;"></h3>
-      <p id="simModalSub" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;"></p>
+        <div>
+          <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 6px; display: block;" data-i18n="labelMessage">Message</label>
+          <textarea id="contactMessage" required rows="4" placeholder="Hello Eduardo, I'd like to discuss a project..." class="cmd-palette-input" style="padding: 10px 14px; font-size: 0.88rem; resize: vertical; font-family: var(--font-sans);"></textarea>
+        </div>
 
-      <div id="simTabBar" class="simulator-tab-bar" style="margin-top: 16px;"></div>
+        <div id="contactFormStatus" style="font-size: 0.82rem; font-family: var(--font-mono); display: none; padding: 10px 12px; border-radius: 6px;"></div>
 
-      <div id="simContent"></div>
+        <button type="submit" id="submitContactBtn" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 4px;">
+          <span data-i18n="btnSubmitMessage">Send Message</span>
+        </button>
+      </form>
     </div>
   </div>
 

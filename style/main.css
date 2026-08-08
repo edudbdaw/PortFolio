@@ -38,6 +38,19 @@
   --transition-normal: 0.25s ease;
 }
 
+/* ===== Scroll Progress Indicator ===== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #38bdf8, #4ade80);
+  z-index: 10000;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
 /* ===== Global Reset & Base ===== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -366,7 +379,7 @@ body {
   color: var(--text-secondary);
   max-width: 680px;
   text-align: center;
-  margin-bottom: 32px;
+  margin: 0 auto 32px auto;
   font-weight: 400;
   line-height: 1.6;
 }
@@ -776,7 +789,7 @@ body {
 }
 
 /* ===== Responsive ===== */
-@max-width: 640px {
+@media (max-width: 640px) {
   .section {
     padding: 60px 16px;
   }

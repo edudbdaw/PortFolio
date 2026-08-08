@@ -125,12 +125,13 @@ function renderCommandList(query) {
       action: () => { setLanguage('en'); closeCommandPalette(); }
     },
     {
-      label: lang === 'es' ? 'Descargar Resume / CV PDF' : 'Download Resume PDF',
+      label: lang === 'es' ? 'Descargar CV (Español)' : 'Download CV (English)',
       shortcut: 'FILE',
       action: () => {
+        const cvFile = lang === 'es' ? 'Eduardo_Duran_CV_ES.docx' : 'Eduardo_Duran_CV_EN.docx';
         const link = document.createElement('a');
-        link.href = 'media/eduardoDuranCV.pdf';
-        link.download = 'eduardoDuranCV.pdf';
+        link.href = `media/cv/${cvFile}`;
+        link.download = cvFile;
         link.click();
         closeCommandPalette();
       }
