@@ -9,7 +9,6 @@ import { initStackMatrixFilter } from './stackMatrix.js';
 import { initTerminal } from './terminal.js';
 import { initCommandPalette } from './commandPalette.js';
 import { initCompatibilityQuiz } from './compatibilityQuiz.js';
-import { initHealthMonitor } from './healthMonitor.js';
 import { initSqlPlayground } from './sqlPlayground.js';
 import { initProfileAdapter } from './profileAdapter.js';
 import { initCaseStudyDrawer } from './caseStudyDrawer.js';
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize interactive features
   initProfileAdapter();
-  initHealthMonitor();
   initSqlPlayground();
   initTerminal();
   initCommandPalette();
@@ -57,7 +55,6 @@ function initLangButtons() {
       
       // Re-render modules in new language
       initCompatibilityQuiz();
-      initHealthMonitor();
       initSqlPlayground();
       initProfileAdapter();
     });

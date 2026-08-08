@@ -7,7 +7,7 @@ import { getLanguage } from './i18n.js';
 const queriesData = {
   mercadillo: {
     title: "Mercadillos La Palma — Multi-Tenant Order & Inventory Query",
-    description: "Fetches active vendor stalls, total revenue, and product inventory using Laravel 12 Eloquent ORM & optimized MySQL 8 JOINs.",
+    description: "Fetches active vendor stalls, total revenue, and product inventory using Laravel 12 Eloquent ORM & relational MySQL 8 JOINs.",
     eloquent: `// Laravel 12 Eloquent ORM Controller Method
 public function getVendorDashboardStats(int $marketId): JsonResponse
 {
@@ -19,11 +19,10 @@ public function getVendorDashboardStats(int $marketId): JsonResponse
 
     return response()->json([
         'status' => 'success',
-        'execution_ms' => 38,
         'data' => $stats
     ]);
 }`,
-    sql: `-- Optimized MySQL 8 Relational Query
+    sql: `-- Relational MySQL 8 Query
 SELECT 
     ms.id AS stall_id,
     ms.stall_number,
@@ -36,8 +35,7 @@ LEFT JOIN products p ON p.stall_id = ms.id AND p.stock > 0
 LEFT JOIN orders o ON o.stall_id = ms.id
 WHERE ms.market_id = 12 AND ms.status = 'active'
 GROUP BY ms.id, u.id
-ORDER BY total_revenue DESC;`,
-    explain: "EXPLAIN: Using index `idx_market_status` (Cost: 0.12). 0.003s response time."
+ORDER BY total_revenue DESC;`
   },
   fut: {
     title: "FUT Telescope — Hardware Socket Session & JSONB Telemetry",
@@ -55,8 +53,7 @@ public function getTelescopeTelemetry(string $sessionUuid): ArrayResponse
     
     return [
         'ra_dec' => $session->coordinates_json,
-        'socket_state' => $rawSocketData['status'],
-        'latency_ms' => 24
+        'socket_state' => $rawSocketData['status']
     ];
 }`,
     sql: `-- PostgreSQL 15 Telemetry JSONB Extraction Query
@@ -70,33 +67,7 @@ FROM telescope_sessions
 WHERE status = 'CONNECTED'
   AND (coordinates_json->>'ra')::numeric > 180.0
 ORDER BY connected_at DESC
-LIMIT 5;`,
-    explain: "EXPLAIN: Index Scan using `idx_telescope_status_gin` on `telescope_sessions`. Latency: 1.8ms."
-  },
-  security: {
-    title: "Security & Authorization Middleware Policy",
-    description: "Laravel 12 Gate / Policy check verifying role-based authorization before accessing database mutations.",
-    eloquent: `// Laravel 12 RBAC Policy Gate
-public function updateStallInventory(User $user, MarketStall $stall): bool
-{
-    // SuperAdmin or Verified Stall Vendor
-    if ($user->hasRole('admin')) {
-        return true;
-    }
-
-    return $user->id === $stall->vendor_id 
-        && $stall->status === 'active';
-}`,
-    sql: `-- Role & Permissions RBAC Table Verification
-SELECT 
-    r.name AS role_name,
-    p.name AS permission
-FROM model_has_roles mhr
-JOIN roles r ON r.id = mhr.role_id
-JOIN role_has_permissions rhp ON rhp.role_id = r.id
-JOIN permissions p ON p.id = rhp.permission_id
-WHERE mhr.model_id = 42 AND p.name = 'manage-inventory';`,
-    explain: "EXPLAIN: Primary key lookup on `model_has_roles`. Execution: 0.4ms."
+LIMIT 5;`
   }
 };
 
@@ -115,7 +86,7 @@ function renderPlayground() {
   if (!container) return;
 
   const lang = getLanguage();
-  const q = queriesData[activeQueryKey];
+  const q = queriesData[activeQueryKey] || queriesData.mercadillo;
 
   container.innerHTML = `
     <div class="glass-card reveal visible" style="padding: 24px;">
@@ -143,19 +114,11 @@ function renderPlayground() {
         <button class="btn btn-secondary btn-sm query-selector-btn ${activeQueryKey === 'fut' ? 'active' : ''}" data-key="fut">
           🔭 FUT Telescope (PHP / Postgres / Socket)
         </button>
-        <button class="btn btn-secondary btn-sm query-selector-btn ${activeQueryKey === 'security' ? 'active' : ''}" data-key="security">
-          🛡️ RBAC Middleware Gate
-        </button>
       </div>
 
       <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 12px;">${q.description}</p>
 
       <pre class="code-snippet-box" style="margin-top: 0; min-height: 220px;">${escapeHTML(activeViewMode === 'eloquent' ? q.eloquent : q.sql)}</pre>
-
-      <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
-        <span>⚡ ${q.explain}</span>
-        <span style="color: #4ade80;">✔ Optimized</span>
-      </div>
     </div>
   `;
 
