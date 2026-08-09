@@ -189,8 +189,7 @@ function executeCommand(cmd) {
     case 'cat cv':
     case 'cat resume':
     case 'cv':
-      const cvFile = lang === 'es' ? 'Eduardo_Duran_CV_ES.docx' : 'Eduardo_Duran_CV_EN.docx';
-      const cvPath = `media/cv/${cvFile}`;
+      const cvFile = lang === 'es' ? 'Eduardo_Duran_CV_ES.pdf' : 'Eduardo_Duran_CV_EN.pdf';
       responseHTML = `
         <div class="terminal-response">
           <p style="color: #4ade80;">[SYSTEM]: Triggering resume download (${cvFile})...</p>
@@ -198,7 +197,7 @@ function executeCommand(cmd) {
       `;
       // Trigger download
       const link = document.createElement('a');
-      link.href = cvPath;
+      link.href = `media/cv/${cvFile}`;
       link.download = cvFile;
       link.click();
       break;

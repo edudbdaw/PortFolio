@@ -215,15 +215,15 @@ export function updateDOMTexts() {
     }
   });
 
-  // Dynamic CV Download link per language
+  // Dynamic CV Download link per language (PDF)
   const cvBtn = document.getElementById('downloadCvBtn');
   if (cvBtn) {
     if (currentLang === 'es') {
-      cvBtn.href = 'media/cv/Eduardo_Duran_CV_ES.docx';
-      cvBtn.download = 'Eduardo_Duran_CV_ES.docx';
+      cvBtn.href = 'media/cv/Eduardo_Duran_CV_ES.pdf';
+      cvBtn.download = 'Eduardo_Duran_CV_ES.pdf';
     } else {
-      cvBtn.href = 'media/cv/Eduardo_Duran_CV_EN.docx';
-      cvBtn.download = 'Eduardo_Duran_CV_EN.docx';
+      cvBtn.href = 'media/cv/Eduardo_Duran_CV_EN.pdf';
+      cvBtn.download = 'Eduardo_Duran_CV_EN.pdf';
     }
   }
 }
