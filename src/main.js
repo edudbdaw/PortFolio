@@ -1,13 +1,15 @@
 /**
- * Eduardo Duran — Main Application Orchestrator (Natural & Human)
+ * Eduardo Duran — Main Application Orchestrator
+ * Integrates interactive components, Shadcn-style dialogs, and Toast primitives
  */
 
 import { getLanguage, setLanguage, updateDOMTexts } from './i18n.js';
-import { initStackMatrixFilter } from './stackMatrix.js';
+import { initStackMatrixFilter, updateStackCounts } from './stackMatrix.js';
 import { initTerminal } from './terminal.js';
 import { initCommandPalette } from './commandPalette.js';
 import { initCompatibilityQuiz } from './compatibilityQuiz.js';
 import { initProfileAdapter } from './profileAdapter.js';
+import { showToast } from './toast.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize i18n
@@ -51,7 +53,7 @@ function initScrollProgress() {
   updateProgress();
 }
 
-// ===== Contact Form Modal =====
+// ===== Contact Form Modal (Shadcn Dialog Primitive) =====
 function initContactModal() {
   const modal = document.getElementById('contactModal');
   const openBtn = document.getElementById('openContactModalBtn');
@@ -69,6 +71,8 @@ function initContactModal() {
       e.preventDefault();
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
+      const firstInput = modal.querySelector('#contactName');
+      if (firstInput) setTimeout(() => firstInput.focus(), 100);
     });
   }
 
@@ -97,7 +101,11 @@ function initContactModal() {
 
       if (!name || !email || !message) return;
 
-      if (submitBtn) submitBtn.disabled = true;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<svg class="spinner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/></svg> <span>${lang === 'es' ? 'Enviando...' : 'Sending...'}</span>`;
+      }
+
       if (statusDiv) {
         statusDiv.style.display = 'block';
         statusDiv.style.background = 'rgba(56, 189, 248, 0.1)';
@@ -111,7 +119,7 @@ function initContactModal() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
-            access_key: '56f87ca6-4d04-4b53-b2ca-f04bf449f874', // Free Web3Forms Key endpoint
+            access_key: '56f87ca6-4d04-4b53-b2ca-f04bf449f874',
             name: name,
             email: email,
             message: message,
@@ -126,16 +134,30 @@ function initContactModal() {
             statusDiv.style.background = 'rgba(34, 197, 94, 0.1)';
             statusDiv.style.color = '#4ade80';
             statusDiv.style.border = '1px solid rgba(34, 197, 94, 0.2)';
-            statusDiv.textContent = lang === 'es' ? '✔ ¡Mensaje enviado con éxito! Eduardo responderá pronto.' : '✔ Message sent successfully! Eduardo will reply shortly.';
+            statusDiv.textContent = lang === 'es' ? '✔ ¡Mensaje enviado! Eduardo responderá pronto.' : '✔ Message sent! Eduardo will reply shortly.';
           }
           form.reset();
-          setTimeout(() => closeModal(), 2800);
+
+          showToast({
+            title: lang === 'es' ? '¡Mensaje enviado con éxito!' : 'Message sent successfully!',
+            description: lang === 'es' ? 'Gracias por contactar, te responderé pronto.' : 'Thank you for reaching out, I will get back to you soon.',
+            variant: 'success'
+          });
+
+          setTimeout(() => closeModal(), 2200);
         } else {
           throw new Error('Fallback to mailto');
         }
       } catch (err) {
-        // Fallback open mailto if network or key limit
+        // Fallback open mailto if network or service issue
         window.location.href = `mailto:edudbdaw@gmail.com?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + email)}`;
+        
+        showToast({
+          title: lang === 'es' ? 'Abriendo cliente de correo...' : 'Opening mail client...',
+          description: 'edudbdaw@gmail.com',
+          variant: 'info'
+        });
+
         if (statusDiv) {
           statusDiv.style.background = 'rgba(34, 197, 94, 0.1)';
           statusDiv.style.color = '#4ade80';
@@ -143,7 +165,10 @@ function initContactModal() {
           statusDiv.textContent = lang === 'es' ? '✔ Abriendo tu gestor de correo para enviar...' : '✔ Opening your mail client to send...';
         }
       } finally {
-        if (submitBtn) submitBtn.disabled = false;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<span>${lang === 'es' ? 'Enviar Mensaje' : 'Send Message'}</span>`;
+        }
       }
     });
   }
@@ -159,6 +184,14 @@ function initLangButtons() {
       // Re-render modules in new language
       initCompatibilityQuiz();
       initProfileAdapter();
+      updateStackCounts();
+
+      showToast({
+        title: lang === 'es' ? 'Idioma cambiado a Español' : 'Language switched to English',
+        description: lang === 'es' ? 'Interfaz en español activada' : 'English interface active',
+        variant: 'info',
+        duration: 2400
+      });
     });
   });
 }
@@ -209,6 +242,12 @@ function initEmailCopy() {
           btn.style.borderColor = '';
         }, 2200);
       }
+
+      showToast({
+        title: getLanguage() === 'es' ? 'Email copiado al portapapeles' : 'Email copied to clipboard',
+        description: email,
+        variant: 'success'
+      });
     });
   });
 }

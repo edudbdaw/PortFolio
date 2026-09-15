@@ -1,28 +1,29 @@
 /**
  * Eduardo Duran — Interactive Tech Stack Matrix
+ * Upgraded with Shadcn Tabs counter badges and card primitives
  */
 
 const stackData = [
   // Backend & DB
-  { name: 'PHP 8.4', category: 'backend', icon: 'img/php.svg', projects: ['FUT Telescope', 'Mercadillos', 'Game Catalog'] },
-  { name: 'Laravel 12', category: 'backend', icon: 'img/Laravel.svg.png', projects: ['Mercadillos La Palma'] },
-  { name: 'Python', category: 'backend', icon: 'svg-python', projects: ['Certified Developer', 'Data Scripts'] },
-  { name: 'Java', category: 'backend', icon: 'img/java2.png', projects: ['DAW Projects'] },
-  { name: 'JavaScript', category: 'backend', icon: 'img/js.png', projects: ['FUT Telescope', 'Los Simpson', 'Notas'] },
-  { name: 'MySQL', category: 'backend', icon: 'img/logo-mysql-170x115.png', projects: ['Mercadillos', 'Game Catalog'] },
-  { name: 'PostgreSQL', category: 'backend', icon: 'svg-postgres', projects: ['FUT Telescope'] },
+  { name: 'PHP 8.4', category: 'backend', categoryLabel: 'Backend', icon: 'img/php.svg', projects: ['FUT Telescope', 'Mercadillos', 'Game Catalog'] },
+  { name: 'Laravel 12', category: 'backend', categoryLabel: 'Framework', icon: 'img/Laravel.svg.png', projects: ['Mercadillos La Palma'] },
+  { name: 'Python', category: 'backend', categoryLabel: 'Backend', icon: 'svg-python', projects: ['Certified Developer', 'Data Scripts'] },
+  { name: 'Java', category: 'backend', categoryLabel: 'Backend', icon: 'img/java2.png', projects: ['DAW Projects'] },
+  { name: 'JavaScript', category: 'backend', categoryLabel: 'Core', icon: 'img/js.png', projects: ['FUT Telescope', 'Los Simpson', 'Notas'] },
+  { name: 'MySQL', category: 'backend', categoryLabel: 'Database', icon: 'img/logo-mysql-170x115.png', projects: ['Mercadillos', 'Game Catalog'] },
+  { name: 'PostgreSQL', category: 'backend', categoryLabel: 'Database', icon: 'svg-postgres', projects: ['FUT Telescope'] },
 
   // Frontend & UI
-  { name: 'Vue.js', category: 'frontend', icon: 'svg-vue', projects: ['Inertia/Vue Apps'] },
-  { name: 'Tailwind CSS', category: 'frontend', icon: 'img/tailwindcss-mark.d52e9897.svg', projects: ['Mercadillos', 'Portfolio', 'Catalog'] },
-  { name: 'Bootstrap', category: 'frontend', icon: 'img/Bootstrap_logo.svg', projects: ['UI Kits'] },
-  { name: 'HTML5', category: 'frontend', icon: 'img/html.png', projects: ['All Projects'] },
-  { name: 'CSS3 / SASS', category: 'frontend', icon: 'img/css-3.png', projects: ['Custom Design Systems'] },
+  { name: 'Vue.js', category: 'frontend', categoryLabel: 'Frontend', icon: 'svg-vue', projects: ['Inertia/Vue Apps'] },
+  { name: 'Tailwind CSS', category: 'frontend', categoryLabel: 'Styling', icon: 'img/tailwindcss-mark.d52e9897.svg', projects: ['Mercadillos', 'Portfolio', 'Catalog'] },
+  { name: 'Bootstrap', category: 'frontend', categoryLabel: 'UI Kit', icon: 'img/Bootstrap_logo.svg', projects: ['UI Kits'] },
+  { name: 'HTML5', category: 'frontend', categoryLabel: 'Web', icon: 'img/html.png', projects: ['All Projects'] },
+  { name: 'CSS3 / SASS', category: 'frontend', categoryLabel: 'Styling', icon: 'img/css-3.png', projects: ['Custom Design Systems'] },
 
   // DevOps & Tools
-  { name: 'Docker', category: 'devops', icon: 'img/Docker-Logos/docker-logos/SVG/docker-mark-blue.svg', projects: ['Containerized Environments'] },
-  { name: 'Git', category: 'devops', icon: 'svg-git', projects: ['Version Control'] },
-  { name: 'GitHub', category: 'devops', icon: 'img/github-mark-white.svg', projects: ['Repositories'] }
+  { name: 'Docker', category: 'devops', categoryLabel: 'Containers', icon: 'img/Docker-Logos/docker-logos/SVG/docker-mark-blue.svg', projects: ['Containerized Environments'] },
+  { name: 'Git', category: 'devops', categoryLabel: 'VCS', icon: 'svg-git', projects: ['Version Control'] },
+  { name: 'GitHub', category: 'devops', categoryLabel: 'CI/CD', icon: 'img/github-mark-white.svg', projects: ['Repositories'] }
 ];
 
 export function renderStackMatrix(filterCategory = 'all') {
@@ -34,10 +35,13 @@ export function renderStackMatrix(filterCategory = 'all') {
     : stackData.filter(item => item.category === filterCategory);
 
   container.innerHTML = filteredItems.map(item => `
-    <div class="stack-card" data-category="${item.category}">
+    <div class="stack-card glass-card-hover" data-category="${item.category}">
+      <div class="stack-card-top">
+        <span class="stack-category-badge">${item.categoryLabel}</span>
+      </div>
       ${renderIcon(item.icon, item.name)}
-      <span style="font-size: 0.85rem; font-weight: 600; color: #f8fafc;">${item.name}</span>
-      <span style="font-size: 0.7rem; color: #06b6d4; font-family: var(--font-mono); text-align: center;">
+      <span class="stack-card-name">${item.name}</span>
+      <span class="stack-card-project">
         ${item.projects[0]}
       </span>
     </div>
@@ -69,7 +73,29 @@ function renderIcon(iconPath, altName) {
     </svg>`;
   }
 
-  return `<img class="stack-icon" src="${iconPath}" alt="${altName}">`;
+  return `<img class="stack-icon" src="${iconPath}" alt="${altName}" loading="lazy" decoding="async">`;
+}
+
+export function updateStackCounts() {
+  const allCount = stackData.length;
+  const backendCount = stackData.filter(i => i.category === 'backend').length;
+  const frontendCount = stackData.filter(i => i.category === 'frontend').length;
+  const devopsCount = stackData.filter(i => i.category === 'devops').length;
+
+  const countMap = {
+    all: allCount,
+    backend: backendCount,
+    frontend: frontendCount,
+    devops: devopsCount
+  };
+
+  document.querySelectorAll('.stack-filter-btn').forEach(btn => {
+    const filter = btn.getAttribute('data-filter');
+    const countBadge = btn.querySelector('.tab-count');
+    if (countBadge && countMap[filter] !== undefined) {
+      countBadge.textContent = countMap[filter];
+    }
+  });
 }
 
 export function initStackMatrixFilter() {
@@ -82,6 +108,9 @@ export function initStackMatrixFilter() {
       renderStackMatrix(category);
     });
   });
+
+  // Calculate dynamic counts
+  updateStackCounts();
 
   // Render initial matrix
   renderStackMatrix('all');

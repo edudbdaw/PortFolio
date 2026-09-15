@@ -1,0 +1,17 @@
+# Dependencies & Build artifacts
+node_modules/
+dist/
+build/
+.cache/
+
+# UI Main skill / workspace additions
+ui-main/
+
+# OS / Environment files
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# Logs
+*.log

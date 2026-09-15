@@ -255,15 +255,12 @@
             <div>
               <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;">
                 <span class="badge">Mobile App</span>
-                <span class="badge badge-emerald">Google Play Closed Beta</span>
+                <span class="badge badge-emerald" data-i18n="sleepBadge">Google Play Release</span>
               </div>
               <h3 style="font-size: 1.3rem; font-weight: 700; color: #fff;" data-i18n="sleepTitle">90Sleep — R90 Sleep Cycle Alarm App</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono); margin-top: 2px;" data-i18n="sleepOrg">Mobile App (Flutter) · Google Play Closed Beta</p>
+              <p style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono); margin-top: 2px;" data-i18n="sleepOrg">Mobile App (Flutter) · Google Play Store</p>
               <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.5;" data-i18n="sleepDesc">
                 Flutter mobile app (migrated from a Capacitor prototype), 90-minute sleep cycle method, sleep log, statistics, custom settings, and countdown alarm.
-              </p>
-              <p style="font-size: 0.78rem; color: #a1a1aa; background: rgba(255, 255, 255, 0.03); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.08); margin-top: 12px; font-style: italic;" data-i18n="sleepNote">
-                Currently in closed tester phase on Google Play — no public link available.
               </p>
               <div class="project-tags" style="margin-top: 12px;">
                 <span class="tech-tag">Flutter</span>
@@ -271,6 +268,13 @@
                 <span class="tech-tag">Capacitor Migration</span>
                 <span class="tech-tag">Google Play</span>
               </div>
+            </div>
+
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+              <a href="https://play.google.com/store/apps/details?id=com.duranlab.sleep_app" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span data-i18n="sleepStoreBtn">Get on Google Play</span>
+              </a>
             </div>
           </div>
         </div>
@@ -285,12 +289,26 @@
         <h2 class="section-title" data-i18n="stackTitle">Technology Stack</h2>
       </div>
 
-      <!-- Filter Controls -->
-      <div class="reveal" style="display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;">
-        <button class="btn btn-secondary btn-sm stack-filter-btn active" data-filter="all" data-i18n="filterAll">All Technologies</button>
-        <button class="btn btn-secondary btn-sm stack-filter-btn" data-filter="backend" data-i18n="filterBackend">Backend & Databases</button>
-        <button class="btn btn-secondary btn-sm stack-filter-btn" data-filter="frontend" data-i18n="filterFrontend">Frontend & UI</button>
-        <button class="btn btn-secondary btn-sm stack-filter-btn" data-filter="devops" data-i18n="filterDevOps">DevOps & Tools</button>
+      <!-- Filter Controls (Shadcn Tabs / Segmented Control) -->
+      <div class="reveal stack-tabs-container">
+        <div class="stack-tabs-list" role="tablist">
+          <button class="stack-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            <span data-i18n="filterAll">All Technologies</span>
+            <span class="tab-count">15</span>
+          </button>
+          <button class="stack-filter-btn" data-filter="backend" data-filter-type="backend" role="tab">
+            <span data-i18n="filterBackend">Backend & Databases</span>
+            <span class="tab-count">7</span>
+          </button>
+          <button class="stack-filter-btn" data-filter="frontend" data-filter-type="frontend" role="tab">
+            <span data-i18n="filterFrontend">Frontend & UI</span>
+            <span class="tab-count">5</span>
+          </button>
+          <button class="stack-filter-btn" data-filter="devops" data-filter-type="devops" role="tab">
+            <span data-i18n="filterDevOps">DevOps & Tools</span>
+            <span class="tab-count">3</span>
+          </button>
+        </div>
       </div>
 
       <!-- Matrix Container -->
@@ -384,48 +402,70 @@
     <p>© 2026 Eduardo Duran — Full-Stack Web Developer. <span data-i18n="footerRights">All rights reserved.</span></p>
   </footer>
 
-  <!-- ===== CMD + K COMMAND PALETTE MODAL ===== -->
-  <div id="cmdPaletteModal" class="modal-overlay">
-    <div class="modal-container" style="max-width: 560px; padding: 20px;">
-      <button class="modal-close-btn">&times;</button>
-      <input type="text" id="cmdInput" class="cmd-palette-input" placeholder="Type a command or search section..." autocomplete="off" spellcheck="false">
-      <div id="cmdList" style="display: flex; flex-direction: column; gap: 4px; max-height: 320px; overflow-y: auto;"></div>
+  <!-- ===== CMD + K COMMAND PALETTE MODAL (Shadcn cmdk Primitive) ===== -->
+  <div id="cmdPaletteModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-palette-dialog">
+      <div class="cmd-search-header">
+        <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="cmdInput" class="cmd-input-field" placeholder="Type a command or search..." autocomplete="off" spellcheck="false">
+        <button class="modal-close-btn cmd-close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div id="cmdList" class="cmd-list-wrapper"></div>
+      <div class="cmd-palette-footer">
+        <div class="cmd-footer-hint">
+          <kbd class="kbd-key">↑</kbd><kbd class="kbd-key">↓</kbd> <span>Navigate</span>
+        </div>
+        <div class="cmd-footer-hint">
+          <kbd class="kbd-key">↵</kbd> <span>Select</span>
+        </div>
+        <div class="cmd-footer-hint">
+          <kbd class="kbd-key">esc</kbd> <span>Close</span>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ===== DIRECT CONTACT FORM MODAL ===== -->
-  <div id="contactModal" class="modal-overlay">
-    <div class="modal-container" style="max-width: 520px; padding: 24px;">
-      <button class="modal-close-btn">&times;</button>
-      <h3 style="font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 6px;" data-i18n="contactModalTitle">Send a Direct Message</h3>
-      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 18px;" data-i18n="contactModalDesc">
-        Fill in your details below to send a message directly to Eduardo.
-      </p>
+  <!-- ===== DIRECT CONTACT FORM MODAL (Shadcn Dialog Primitive) ===== -->
+  <div id="contactModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="modal-container dialog-container" style="max-width: 520px;">
+      <button class="modal-close-btn dialog-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="dialog-header">
+        <h3 id="contactModalTitle" class="dialog-title" data-i18n="contactModalTitle">Send a Direct Message</h3>
+        <p class="dialog-desc" data-i18n="contactModalDesc">
+          Fill in your details below to send a message directly to Eduardo.
+        </p>
+      </div>
 
-      <form id="contactForm" style="display: flex; flex-direction: column; gap: 14px;">
-        <div>
-          <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 6px; display: block;" data-i18n="labelName">Your Name</label>
-          <input type="text" id="contactName" required placeholder="John Doe" class="cmd-palette-input" style="padding: 10px 14px; font-size: 0.88rem;">
+      <form id="contactForm" class="dialog-form">
+        <div class="form-group">
+          <label class="form-label" data-i18n="labelName">Your Name</label>
+          <input type="text" id="contactName" required placeholder="John Doe" class="form-input">
         </div>
 
-        <div>
-          <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 6px; display: block;" data-i18n="labelEmail">Your Email</label>
-          <input type="email" id="contactEmail" required placeholder="john@example.com" class="cmd-palette-input" style="padding: 10px 14px; font-size: 0.88rem;">
+        <div class="form-group">
+          <label class="form-label" data-i18n="labelEmail">Your Email</label>
+          <input type="email" id="contactEmail" required placeholder="john@example.com" class="form-input">
         </div>
 
-        <div>
-          <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 6px; display: block;" data-i18n="labelMessage">Message</label>
-          <textarea id="contactMessage" required rows="4" placeholder="Hello Eduardo, I'd like to discuss a project..." class="cmd-palette-input" style="padding: 10px 14px; font-size: 0.88rem; resize: vertical; font-family: var(--font-sans);"></textarea>
+        <div class="form-group">
+          <label class="form-label" data-i18n="labelMessage">Message</label>
+          <textarea id="contactMessage" required rows="4" placeholder="Hello Eduardo, I'd like to discuss a project..." class="form-textarea"></textarea>
         </div>
 
-        <div id="contactFormStatus" style="font-size: 0.82rem; font-family: var(--font-mono); display: none; padding: 10px 12px; border-radius: 6px;"></div>
+        <div id="contactFormStatus" class="form-status-alert"></div>
 
-        <button type="submit" id="submitContactBtn" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 4px;">
+        <button type="submit" id="submitContactBtn" class="btn btn-primary form-submit-btn">
           <span data-i18n="btnSubmitMessage">Send Message</span>
         </button>
       </form>
     </div>
   </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
 
   <!-- Application Script Module -->
   <script type="module" src="src/main.js"></script>
