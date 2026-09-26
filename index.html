@@ -11,6 +11,9 @@
 
   <title>Eduardo Duran — Full-Stack Web Developer</title>
 
+  <!-- High-Craft SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2307090e'/%3E%3Cpath d='M30 25h40v12H44v13h22v12H44v13h26v12H30z' fill='%2338bdf8'/%3E%3C/svg%3E">
+
   <!-- Modern Styling -->
   <link rel="stylesheet" href="style/main.css">
 </head>
@@ -49,7 +52,6 @@
 
         <!-- Status Pill -->
         <div class="status-pill reveal">
-          <span class="pulse-dot"></span>
           <span data-i18n="statusAvailable">Available for Full-Stack Roles & Consultancy Projects</span>
         </div>
 
@@ -57,7 +59,7 @@
 
         <h1 class="hero-title reveal">
           <span data-i18n="heroTitleLine1">Building clean, reliable</span> <br>
-          <span style="color: var(--text-secondary);" data-i18n="heroTitleLine2">web applications & software.</span>
+          <span class="serif-italic" data-i18n="heroTitleLine2">software & web architectures.</span>
         </h1>
 
         <p class="hero-subtitle reveal" data-i18n="heroSubtitle">
@@ -80,6 +82,36 @@
       </div>
     </section>
 
+    <!-- ===== DYNAMIC SCROLLING MARQUEE RIBBON ===== -->
+    <div class="marquee-ribbon" aria-hidden="true">
+      <div id="marqueeTrack" class="marquee-track-container">
+        <div class="marquee-content">
+          <span class="marquee-item"><span class="marquee-accent-blue">LARAVEL 12</span> <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">VUE.JS <span class="marquee-star">✦</span></span>
+          <span class="marquee-item"><span class="marquee-accent-gold">PHP 8.4</span> <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">POSTGRESQL &amp; MYSQL <span class="marquee-star">✦</span></span>
+          <span class="marquee-item"><span class="marquee-accent-blue">DOCKER</span> <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">AARHUS UNIVERSITY <span class="marquee-star">✦</span></span>
+          <span class="marquee-item"><span class="marquee-accent-gold">CABILDO DE LA PALMA</span> <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">CLEAN ARCHITECTURE <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">FLUTTER <span class="marquee-star">✦</span></span>
+          <span class="marquee-item"><span class="marquee-accent-blue">TÉCNICO SUPERIOR DAW</span> <span class="marquee-star">✦</span></span>
+        </div>
+        <div class="marquee-content">
+          <span class="marquee-item"><span class="marquee-accent-blue">LARAVEL 12</span> <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">VUE.JS <span class="marquee-star">✦</span></span>
+          <span class="marquee-item"><span class="marquee-accent-gold">PHP 8.4</span> <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">POSTGRESQL &amp; MYSQL <span class="marquee-star">✦</span></span>
+          <span class="marquee-item"><span class="marquee-accent-blue">DOCKER</span> <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">AARHUS UNIVERSITY <span class="marquee-star">✦</span></span>
+          <span class="marquee-item"><span class="marquee-accent-gold">CABILDO DE LA PALMA</span> <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">CLEAN ARCHITECTURE <span class="marquee-star">✦</span></span>
+          <span class="marquee-item">FLUTTER <span class="marquee-star">✦</span></span>
+          <span class="marquee-item"><span class="marquee-accent-blue">TÉCNICO SUPERIOR DAW</span> <span class="marquee-star">✦</span></span>
+        </div>
+      </div>
+    </div>
+
     <!-- ===== ABOUT & BACKGROUND SECTION ===== -->
     <section id="about" class="section">
       <div class="section-header reveal">
@@ -92,8 +124,9 @@
           <div>
             <span class="section-tag" data-i18n="aboutTag">BACKGROUND & EXPERIENCE</span>
             <h2 class="section-title" data-i18n="aboutTitle" style="margin-bottom: 4px;">Practical execution focused on clean code.</h2>
-            <p style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">
-              📍 La Palma ➔ Denmark / Australia Projects
+            <p style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono); display: inline-flex; align-items: center; gap: 6px;">
+              <svg class="icon-svg" style="width: 14px; height: 14px; color: var(--canary-blue);" viewBox="0 0 256 256" fill="currentColor"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,120a32,32,0,1,1,32-32A32,32,0,0,1,128,136Z"/></svg>
+              <span>La Palma ➔ Denmark / Australia Projects</span>
             </p>
           </div>
         </div>
@@ -107,30 +140,30 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
         
         <div class="glass-card glass-card-hover reveal">
-          <div style="color: var(--text-secondary); margin-bottom: 14px;">
+          <div style="color: var(--canary-blue); margin-bottom: 14px;">
             <svg class="icon-svg icon-svg-lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
-          <h3 style="font-size: 1.05rem; font-weight: 600; color: #fff;" data-i18n="card1Title">International Collaboration</h3>
+          <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary);" data-i18n="card1Title">International Collaboration</h3>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;" data-i18n="card1Desc">
             Developed remote control interfaces for Aarhus University operating astronomy hardware in Australia.
           </p>
         </div>
 
         <div class="glass-card glass-card-hover reveal">
-          <div style="color: var(--text-secondary); margin-bottom: 14px;">
+          <div style="color: var(--canary-yellow); margin-bottom: 14px;">
             <svg class="icon-svg icon-svg-lg" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 10a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11H9V10z"/></svg>
           </div>
-          <h3 style="font-size: 1.05rem; font-weight: 600; color: #fff;" data-i18n="card2Title">Government Digitalization</h3>
+          <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary);" data-i18n="card2Title">Government Digitalization</h3>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;" data-i18n="card2Desc">
             Built multi-tenant market platform designed for adoption by the Government of La Palma.
           </p>
         </div>
 
         <div class="glass-card glass-card-hover reveal">
-          <div style="color: var(--text-secondary); margin-bottom: 14px;">
+          <div style="color: var(--canary-blue); margin-bottom: 14px;">
             <svg class="icon-svg icon-svg-lg" viewBox="0 0 24 24"><path d="M12 15l-2 5l9-9l-9-9l2 5l-7 4z"/></svg>
           </div>
-          <h3 style="font-size: 1.05rem; font-weight: 600; color: #fff;" data-i18n="card3Title">Verified Certifications</h3>
+          <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary);" data-i18n="card3Title">Verified Certifications</h3>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;" data-i18n="card3Desc">
             Microsoft Azure (AZ-900), Cisco Cybersecurity CST, and Certified Python Developer.
           </p>
@@ -169,114 +202,152 @@
 
     </section>
 
-    <!-- ===== FEATURED PROJECTS SECTION ===== -->
+    <!-- ===== FEATURED PROJECTS EXHIBITION SECTION ===== -->
     <section id="projects" class="section">
       <div class="section-header reveal">
-        <span class="section-tag" data-i18n="projectsTag">PORTFOLIO</span>
-        <h2 class="section-title" data-i18n="projectsTitle">Featured Applications</h2>
+        <span class="section-tag" data-i18n="projectsTag">CURATED PORTFOLIO</span>
+        <h2 class="section-title">
+          <span data-i18n="projectsTitle">Featured Applications</span> 
+          <span class="serif-italic" data-i18n="projectsTitleAccent">· Selected Works</span>
+        </h2>
+        <p class="section-desc" data-i18n="projectsSubtitle">
+          Production systems, scientific remote platforms, and architectural deployments engineered with precision.
+        </p>
       </div>
 
-      <div class="projects-grid">
-
-        <!-- Project 1: FUT Telescope -->
-        <div class="project-card-featured glass-card-hover reveal">
-          <div class="project-img-wrapper">
-            <img src="img/projectos/fut.png" alt="FUT Remote Telescope" class="project-img" loading="lazy" decoding="async">
+      <!-- Museum Carousel Controls (Counter, Progress Line, Navigation Arrows) -->
+      <div class="exhibition-controls-header reveal">
+        <div class="carousel-counter-box">
+          <span id="carouselCounter">01 / 03</span>
+          <div class="carousel-progress-track">
+            <div id="carouselProgressLine" class="carousel-progress-line"></div>
           </div>
-          <div class="project-content">
-            <div>
-              <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;">
-                <span class="badge">Full Stack</span>
-                <span class="badge">Aarhus Univ.</span>
+        </div>
+
+        <div class="carousel-nav-buttons">
+          <button id="carouselPrevBtn" class="carousel-arrow-btn" aria-label="Previous Project" disabled>
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button id="carouselNextBtn" class="carousel-arrow-btn" aria-label="Next Project">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Carousel Track Container -->
+      <div id="carouselTrack" class="exhibition-carousel-track">
+
+        <!-- Slide 1: FUT Telescope -->
+        <div class="carousel-slide reveal">
+          <article class="exhibition-card spotlight-card">
+            <!-- Parallax Exhibition Window -->
+            <div class="parallax-window">
+              <img src="img/projectos/fut.png" alt="FUT Remote Telescope Control" class="parallax-img" data-parallax="0.25" loading="lazy" decoding="async">
+            </div>
+
+            <!-- Curated Content & Plaque -->
+            <div class="exhibition-details">
+              <div class="curator-plaque">
+                <svg class="icon-svg" viewBox="0 0 24 24" style="color: var(--canary-blue); width: 14px; height: 14px;"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                <span data-i18n="opus1Plaque">PROJECT 01 · ASTRONOMY &amp; CLOUD INFRASTRUCTURE</span>
               </div>
-              <h3 style="font-size: 1.3rem; font-weight: 700; color: #fff;" data-i18n="futTitle">FUT — Remote Telescope Control Platform</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono); margin-top: 2px;" data-i18n="futOrg">Aarhus University — Denmark / Australia</p>
-              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.5;" data-i18n="futDesc">
+              <h3 class="curator-title" data-i18n="futTitle">FUT — Remote Telescope Control Platform</h3>
+              <p class="curator-origin" data-i18n="futOrg">Aarhus University — Denmark / Australia</p>
+              <p class="curator-desc" data-i18n="futDesc">
                 Full-stack platform enabling astronomy students and researchers to remotely control a professional 60cm telescope at Mt. Kent Observatory in Australia.
               </p>
-              <div class="project-tags">
+
+              <div class="project-tags" style="margin-bottom: 20px;">
                 <span class="tech-tag">PHP 8</span>
                 <span class="tech-tag">JavaScript</span>
                 <span class="tech-tag">PostgreSQL</span>
                 <span class="tech-tag">MediaWiki API</span>
                 <span class="tech-tag">Socket TCP</span>
               </div>
-            </div>
 
-            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-              <a href="https://fut.au.dk" target="_blank" class="btn btn-secondary btn-sm">
-                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Visit Site
-              </a>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://fut.au.dk" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Visit Platform</span>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!-- Project 2: Mercadillos La Palma -->
-        <div class="project-card-featured glass-card-hover reveal">
-          <div class="project-img-wrapper">
-            <img src="img/projectos/mercadillo.png" alt="Mercadillos La Palma" class="project-img" loading="lazy" decoding="async">
-          </div>
-          <div class="project-content">
-            <div>
-              <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;">
-                <span class="badge">Full Stack</span>
-                <span class="badge badge-emerald">Gov. Adoption Plan</span>
+        <!-- Slide 2: Mercadillos La Palma -->
+        <div class="carousel-slide reveal">
+          <article class="exhibition-card spotlight-card">
+            <!-- Parallax Exhibition Window -->
+            <div class="parallax-window">
+              <img src="img/projectos/mercadillo.png" alt="Mercadillos La Palma Platform" class="parallax-img" data-parallax="0.25" loading="lazy" decoding="async">
+            </div>
+
+            <!-- Curated Content & Plaque -->
+            <div class="exhibition-details">
+              <div class="curator-plaque">
+                <svg class="icon-svg" viewBox="0 0 24 24" style="color: var(--canary-yellow); width: 14px; height: 14px;"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 10a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11H9V10z"/></svg>
+                <span data-i18n="opus2Plaque" style="color: #b45309;">PROJECT 02 · GOVERNMENT DIGITALIZATION &amp; COMMERCE</span>
               </div>
-              <h3 style="font-size: 1.3rem; font-weight: 700; color: #fff;" data-i18n="mercadilloTitle">Mercadillos La Palma — Market Platform</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono); margin-top: 2px;" data-i18n="mercadilloOrg">Government Adoption Plan — La Palma</p>
-              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.5;" data-i18n="mercadilloDesc">
+              <h3 class="curator-title" data-i18n="mercadilloTitle">Mercadillos La Palma — Market Platform</h3>
+              <p class="curator-origin" data-i18n="mercadilloOrg">Government Adoption Plan — La Palma</p>
+              <p class="curator-desc" data-i18n="mercadilloDesc">
                 Multi-role e-commerce and inventory system (Clients, Vendors, Administrators) for local agricultural markets built with Laravel 12, Livewire, and MySQL.
               </p>
-              <div class="project-tags">
+
+              <div class="project-tags" style="margin-bottom: 20px;">
                 <span class="tech-tag">Laravel 12</span>
                 <span class="tech-tag">Livewire</span>
                 <span class="tech-tag">Tailwind CSS</span>
                 <span class="tech-tag">MySQL</span>
                 <span class="tech-tag">PHP 8.4</span>
               </div>
-            </div>
 
-            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-              <a href="https://mercadilloslapalma.departamentoinformaticajmpp.com" target="_blank" class="btn btn-secondary btn-sm">
-                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://mercadilloslapalma.departamentoinformaticajmpp.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!-- Project 3: 90Sleep -->
-        <div class="project-card-featured glass-card-hover reveal">
-          <div class="project-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); padding: 20px;">
-            <img src="img/projectos/app_icon_512x512.png" alt="90Sleep App" class="project-img" style="max-height: 160px; width: auto; object-fit: contain; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);" loading="lazy" decoding="async">
-          </div>
-          <div class="project-content">
-            <div>
-              <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;">
-                <span class="badge">Mobile App</span>
-                <span class="badge badge-emerald" data-i18n="sleepBadge">Google Play Release</span>
+        <!-- Slide 3: 90Sleep -->
+        <div class="carousel-slide reveal">
+          <article class="exhibition-card spotlight-card">
+            <!-- Parallax Exhibition Window -->
+            <div class="parallax-window" style="display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);">
+              <img src="img/projectos/app_icon_512x512.png" alt="90Sleep App" class="parallax-img" data-parallax="0.18" style="max-height: 200px; width: auto; object-fit: contain; border-radius: 32px; box-shadow: 0 16px 40px rgba(0,0,0,0.4);" loading="lazy" decoding="async">
+            </div>
+
+            <!-- Curated Content & Plaque -->
+            <div class="exhibition-details">
+              <div class="curator-plaque">
+                <svg class="icon-svg" viewBox="0 0 24 24" style="color: var(--canary-blue); width: 14px; height: 14px;"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                <span data-i18n="opus3Plaque">PROJECT 03 · MOBILE ARCHITECTURE &amp; SLEEP SCIENCE</span>
               </div>
-              <h3 style="font-size: 1.3rem; font-weight: 700; color: #fff;" data-i18n="sleepTitle">90Sleep — R90 Sleep Cycle Alarm App</h3>
-              <p style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono); margin-top: 2px;" data-i18n="sleepOrg">Mobile App (Flutter) · Google Play Store</p>
-              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.5;" data-i18n="sleepDesc">
-                Flutter mobile app (migrated from a Capacitor prototype), 90-minute sleep cycle method, sleep log, statistics, custom settings, and countdown alarm.
+              <h3 class="curator-title" data-i18n="sleepTitle">90Sleep — R90 Sleep Cycle Alarm App</h3>
+              <p class="curator-origin" data-i18n="sleepOrg">Mobile App (Flutter) · Google Play Store</p>
+              <p class="curator-desc" data-i18n="sleepDesc">
+                Flutter mobile app engineered following Nick Littlehales' R90 sleep recovery method, with smart 90-minute circadian cycle calculations and custom alarms.
               </p>
-              <div class="project-tags" style="margin-top: 12px;">
+
+              <div class="project-tags" style="margin-bottom: 20px;">
                 <span class="tech-tag">Flutter</span>
                 <span class="tech-tag">Dart</span>
                 <span class="tech-tag">Capacitor Migration</span>
                 <span class="tech-tag">Google Play</span>
               </div>
-            </div>
 
-            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-              <a href="https://play.google.com/store/apps/details?id=com.duranlab.sleep_app" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
-                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span data-i18n="sleepStoreBtn">Get on Google Play</span>
-              </a>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://play.google.com/store/apps/details?id=com.duranlab.sleep_app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+                  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="sleepStoreBtn">Get on Google Play</span>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
 
       </div>
@@ -325,31 +396,31 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
         
         <div class="glass-card glass-card-hover reveal" style="display: flex; gap: 14px; align-items: center; padding: 20px;">
-          <div style="color: var(--text-secondary);">
+          <div style="color: var(--canary-blue);">
             <svg class="icon-svg icon-svg-lg" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
           </div>
           <div>
-            <h4 style="font-size: 0.95rem; font-weight: 600; color: #fff;" data-i18n="azureTitle">Microsoft Azure Fundamentals</h4>
+            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);" data-i18n="azureTitle">Microsoft Azure Fundamentals</h4>
             <p style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);" data-i18n="azureSub">AZ-900 · Cloud Infrastructure</p>
           </div>
         </div>
 
         <div class="glass-card glass-card-hover reveal" style="display: flex; gap: 14px; align-items: center; padding: 20px;">
-          <div style="color: var(--text-secondary);">
+          <div style="color: var(--canary-yellow);">
             <svg class="icon-svg icon-svg-lg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
           <div>
-            <h4 style="font-size: 0.95rem; font-weight: 600; color: #fff;" data-i18n="ciscoTitle">Cisco Support Technician</h4>
+            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);" data-i18n="ciscoTitle">Cisco Support Technician</h4>
             <p style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);" data-i18n="ciscoSub">Cybersecurity Certified · Network & Security</p>
           </div>
         </div>
 
         <div class="glass-card glass-card-hover reveal" style="display: flex; gap: 14px; align-items: center; padding: 20px;">
-          <div style="color: var(--text-secondary);">
+          <div style="color: var(--canary-blue);">
             <svg class="icon-svg icon-svg-lg" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
           <div>
-            <h4 style="font-size: 0.95rem; font-weight: 600; color: #fff;" data-i18n="pythonTitle">Certified Python Developer</h4>
+            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);" data-i18n="pythonTitle">Certified Python Developer</h4>
             <p style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);" data-i18n="pythonSub">Data Structures & Scripting</p>
           </div>
         </div>
@@ -357,12 +428,12 @@
       </div>
     </section>
 
-    <!-- ===== RECRUITER & DEVELOPER QUIZ SECTION ===== -->
+    <!-- ===== TECHNICAL FIT CHECK SECTION ===== -->
     <section id="quiz" class="section">
       <div class="section-header reveal">
-        <span class="section-tag" data-i18n="quizTag">INTERACTIVE ALIGNMENT</span>
-        <h2 class="section-title" data-i18n="quizTitle">Are We a Match?</h2>
-        <p class="section-desc" data-i18n="quizDesc">Quick 4-question alignment check for tech leads, recruiters, and clients.</p>
+        <span class="section-tag" data-i18n="quizTag">TECHNICAL FIT</span>
+        <h2 class="section-title" data-i18n="quizTitle">Am I the Right Fit for Your Project?</h2>
+        <p class="section-desc" data-i18n="quizDesc">A quick 4-question alignment check to see if my engineering background, technical standards, and work style match what you need.</p>
       </div>
 
       <div id="quizContainer" style="max-width: 680px; margin: 0 auto;"></div>
@@ -372,7 +443,7 @@
     <section id="contact" class="section">
       <div class="glass-card reveal" style="text-align: center; padding: 40px 20px; max-width: 720px; margin: 0 auto;">
         <span class="section-tag" data-i18n="contactTag">CONTACT</span>
-        <h2 style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 10px;" data-i18n="contactTitle">Let's connect</h2>
+        <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;" data-i18n="contactTitle">Let's connect</h2>
         <p style="font-size: 0.92rem; color: var(--text-secondary); max-width: 540px; margin: 0 auto 24px auto;" data-i18n="contactDesc">
           Looking for a reliable Full-Stack Developer for your consultancy, agency, or software team? Reach out directly.
         </p>
@@ -466,6 +537,13 @@
 
   <!-- Toast Notification Container -->
   <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Lenis Smooth Scroll Engine -->
+  <script src="src/vendor/lenis.min.js"></script>
+
+  <!-- GSAP & ScrollTrigger Engine -->
+  <script src="src/vendor/gsap.min.js"></script>
+  <script src="src/vendor/ScrollTrigger.min.js"></script>
 
   <!-- Application Script Module -->
   <script type="module" src="src/main.js"></script>

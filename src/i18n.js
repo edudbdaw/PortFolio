@@ -10,14 +10,14 @@ const translations = {
     navProjects: 'Projects',
     navStack: 'Stack',
     navCerts: 'Certifications',
-    navQuiz: 'Quiz',
+    navQuiz: 'Fit Check',
     navContact: 'Contact',
 
     // Hero Section
     statusAvailable: 'Available for Full-Stack Roles & Consultancy Projects',
     heroTag: 'FULL-STACK DEVELOPER · TÉCNICO SUPERIOR DAW',
     heroTitleLine1: 'Building clean, reliable',
-    heroTitleLine2: 'web applications & software.',
+    heroTitleLine2: 'software & web architectures.',
     heroSubtitle: 'Specialized in Laravel, Vue.js, PostgreSQL, MySQL, and Docker. Developing practical web systems from La Palma to research teams at Aarhus University in Denmark.',
     btnProjects: 'View Projects',
     btnCV: 'Download CV',
@@ -36,9 +36,14 @@ const translations = {
     card3Title: 'Verified Certifications',
     card3Desc: 'Microsoft Azure (AZ-900), Cisco Cybersecurity CST, and Certified Python Developer.',
 
-    // Featured Projects
-    projectsTag: 'PORTFOLIO',
+    // Featured Projects (Curated Gallery)
+    projectsTag: 'CURATED PORTFOLIO',
     projectsTitle: 'Featured Applications',
+    projectsTitleAccent: '· Selected Works',
+    projectsSubtitle: 'Production systems, scientific remote platforms, and architectural deployments engineered with precision.',
+    opus1Plaque: 'PROJECT 01 · ASTRONOMY & CLOUD INFRASTRUCTURE',
+    opus2Plaque: 'PROJECT 02 · GOVERNMENT DIGITALIZATION & COMMERCE',
+    opus3Plaque: 'PROJECT 03 · MOBILE ARCHITECTURE & SLEEP SCIENCE',
     futTitle: 'FUT — Remote Telescope Control Platform',
     futOrg: 'Aarhus University — Denmark / Australia',
     futDesc: 'Full-stack platform enabling astronomy students and researchers to remotely control a professional 60cm telescope at Mt. Kent Observatory in Australia.',
@@ -79,9 +84,9 @@ const translations = {
     pythonSub: 'Data Structures & Scripting',
 
     // Quiz Section
-    quizTag: 'INTERACTIVE ALIGNMENT',
-    quizTitle: 'Are We a Match?',
-    quizDesc: 'Quick 4-question alignment check for tech leads, recruiters, and clients.',
+    quizTag: 'TECHNICAL FIT',
+    quizTitle: 'Am I the Right Fit for Your Project?',
+    quizDesc: 'A quick 4-question alignment check to see if my engineering background, technical standards, and work style match what you need.',
 
     // Contact & Footer
     contactTag: 'CONTACT',
@@ -104,14 +109,14 @@ const translations = {
     navProjects: 'Proyectos',
     navStack: 'Stack',
     navCerts: 'Certificaciones',
-    navQuiz: 'Test',
+    navQuiz: 'Afinidad',
     navContact: 'Contacto',
 
     // Hero Section
     statusAvailable: 'Disponible para Roles Full-Stack y Consultoría',
     heroTag: 'DESARROLLADOR FULL-STACK · TÉCNICO SUPERIOR DAW',
     heroTitleLine1: 'Desarrollo de software',
-    heroTitleLine2: 'y aplicaciones web fiables.',
+    heroTitleLine2: 'y arquitecturas web de precisión.',
     heroSubtitle: 'Especializado en Laravel, Vue.js, PostgreSQL, MySQL y Docker. Creando aplicaciones web reales desde La Palma hasta equipos de investigación en la Universidad de Aarhus (Dinamarca).',
     btnProjects: 'Ver Proyectos',
     btnCV: 'Descargar CV',
@@ -130,9 +135,14 @@ const translations = {
     card3Title: 'Certificaciones Verificadas',
     card3Desc: 'Microsoft Azure (AZ-900), Cisco Cybersecurity CST y Certified Python Developer.',
 
-    // Featured Projects
-    projectsTag: 'PORTAFOLIO',
+    // Featured Projects (Curated Gallery)
+    projectsTag: 'PORTAFOLIO SELECCIONADO',
     projectsTitle: 'Aplicaciones Destacadas',
+    projectsTitleAccent: '· Proyectos Principales',
+    projectsSubtitle: 'Sistemas en producción, plataformas científicas remotas y desarrollos arquitectónicos creados con rigor técnico.',
+    opus1Plaque: 'PROYECTO 01 · ASTRONOMÍA E INFRAESTRUCTURA CLOUD',
+    opus2Plaque: 'PROYECTO 02 · DIGITALIZACIÓN PÚBLICA Y COMERCIO',
+    opus3Plaque: 'PROYECTO 03 · INGENIERÍA MÓVIL Y CIENCIA DEL SUEÑO',
     futTitle: 'FUT — Control Remoto de Telescopio',
     futOrg: 'Universidad de Aarhus — Dinamarca / Australia',
     futDesc: 'Plataforma full-stack que permite a estudiantes de astronomía e investigadores controlar remotamente un telescopio profesional de 60cm en el observatorio Mt. Kent (Australia).',
@@ -173,9 +183,9 @@ const translations = {
     pythonSub: 'Estructuras de Datos y Scripting',
 
     // Quiz Section
-    quizTag: 'TEST DE COMPATIBILIDAD',
-    quizTitle: '¿Encajamos en tu equipo?',
-    quizDesc: 'Rápido chequeo de afinidad en 4 preguntas para responsables de selección y líderes técnicos.',
+    quizTag: 'COMPATIBILIDAD TÉCNICA',
+    quizTitle: '¿Soy el desarrollador que buscas?',
+    quizDesc: 'Un chequeo rápido en 4 preguntas para ver si mis estándares técnicos, autonomía y experiencia DAW encajan con tu proyecto.',
 
     // Contact & Footer
     contactTag: 'CONTACTO',

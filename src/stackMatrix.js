@@ -23,7 +23,7 @@ const stackData = [
   // DevOps & Tools
   { name: 'Docker', category: 'devops', categoryLabel: 'Containers', icon: 'img/Docker-Logos/docker-logos/SVG/docker-mark-blue.svg', projects: ['Containerized Environments'] },
   { name: 'Git', category: 'devops', categoryLabel: 'VCS', icon: 'svg-git', projects: ['Version Control'] },
-  { name: 'GitHub', category: 'devops', categoryLabel: 'CI/CD', icon: 'img/github-mark-white.svg', projects: ['Repositories'] }
+  { name: 'GitHub', category: 'devops', categoryLabel: 'CI/CD', icon: 'img/github-mark.svg', projects: ['Repositories'] }
 ];
 
 export function renderStackMatrix(filterCategory = 'all') {

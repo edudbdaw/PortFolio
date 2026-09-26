@@ -73,14 +73,17 @@ function renderAdapterBar() {
       </div>
 
       <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-        <button class="btn btn-secondary btn-sm profile-btn ${currentProfile === 'consultancy' ? 'btn-primary' : ''}" data-profile="consultancy">
-          🏢 IT Consultancy / Agency
+        <button class="btn btn-secondary btn-sm profile-btn ${currentProfile === 'consultancy' ? 'btn-primary' : ''}" data-profile="consultancy" style="display: inline-flex; align-items: center; gap: 6px;">
+          <svg class="icon-svg" style="width: 14px; height: 14px;" viewBox="0 0 256 256" fill="currentColor"><path d="M240,208H224V96a16,16,0,0,0-16-16H144V40a16,16,0,0,0-16-16H48A16,16,0,0,0,32,40V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,40h80V208H48ZM208,96V208H144V96ZM72,72a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H80A8,8,0,0,1,72,72Zm0,32a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm0,32a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H80A8,8,0,0,1,72,136Zm96,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,136Zm0-32a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,104Z"/></svg>
+          <span>IT Consultancy / Agency</span>
         </button>
-        <button class="btn btn-secondary btn-sm profile-btn ${currentProfile === 'publicSector' ? 'btn-primary' : ''}" data-profile="publicSector">
-          🏛️ Public Sector / Client
+        <button class="btn btn-secondary btn-sm profile-btn ${currentProfile === 'publicSector' ? 'btn-primary' : ''}" data-profile="publicSector" style="display: inline-flex; align-items: center; gap: 6px;">
+          <svg class="icon-svg" style="width: 14px; height: 14px;" viewBox="0 0 256 256" fill="currentColor"><path d="M240,208H224V112h16a8,8,0,0,0,0-16L132.8,33.07a8,8,0,0,0-9.6,0L16,96a8,8,0,0,0,0,16H32v96H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,112H80v96H48Zm48,0h32v96H96Zm48,0h32v96H144Zm48,0h16v96H192ZM128,48.53,200.74,96H55.26Z"/></svg>
+          <span>Public Sector / Client</span>
         </button>
-        <button class="btn btn-secondary btn-sm profile-btn ${currentProfile === 'cto' ? 'btn-primary' : ''}" data-profile="cto">
-          💻 CTO / Tech Lead
+        <button class="btn btn-secondary btn-sm profile-btn ${currentProfile === 'cto' ? 'btn-primary' : ''}" data-profile="cto" style="display: inline-flex; align-items: center; gap: 6px;">
+          <svg class="icon-svg" style="width: 14px; height: 14px;" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM109.66,122.34a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L92.69,128,66.34,101.66A8,8,0,0,1,77.66,90.34l32,32Zm82.34,37.66H144a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Z"/></svg>
+          <span>CTO / Tech Lead</span>
         </button>
       </div>
     </div>

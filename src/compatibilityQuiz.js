@@ -104,11 +104,11 @@ function renderQuizStep() {
       </div>
 
       <!-- Progress bar -->
-      <div style="width: 100%; height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; margin-bottom: 20px; overflow: hidden;">
-        <div style="width: ${progressPercent}%; height: 100%; background: #4ade80; transition: width 0.3s ease;"></div>
+      <div style="width: 100%; height: 6px; background: var(--border-medium); border-radius: var(--radius-full); margin-bottom: 24px; overflow: hidden;">
+        <div style="width: ${progressPercent}%; height: 100%; background: var(--canary-blue); transition: width 0.3s ease;"></div>
       </div>
 
-      <h3 style="font-size: 1.15rem; font-weight: 600; color: #fff; margin-bottom: 20px; line-height: 1.5;">
+      <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 20px; line-height: 1.5;">
         ${item.q}
       </h3>
 
@@ -134,7 +134,7 @@ function handleAnswer(isYes, feedback) {
   const feedbackEl = document.getElementById('quizFeedback');
   if (feedbackEl) {
     feedbackEl.textContent = feedback;
-    feedbackEl.style.color = isYes ? '#4ade80' : '#f43f5e';
+    feedbackEl.style.color = isYes ? 'var(--accent-emerald)' : 'var(--accent-rose)';
   }
 
   setTimeout(() => {
@@ -153,22 +153,22 @@ function renderQuizResults(container, lang, questions) {
 
   if (scorePercent === 100) {
     badgeColor = 'badge-emerald';
-    title = lang === 'es' ? '100% Compatibilidad — ¡Encaje Perfecto!' : '100% Match — Perfect Fit Detected!';
+    title = lang === 'es' ? '100% Compatibilidad — ¡Encaje Perfecto!' : '100% Match — Perfect Fit!';
     desc = lang === 'es' 
-      ? 'Buscas a un desarrollador proactivo (Técnico Superior DAW) que escribe software limpio y estable. Eduardo es ideal para tu equipo.' 
-      : 'You are looking for a proactive DAW developer who delivers clean, reliable software. Eduardo is ready for your team!';
+      ? 'Buscas a un desarrollador autónomo (Técnico Superior DAW) enfocado en código limpio, bases de datos y arquitectura estable. Estoy listo para aportar valor a tu proyecto desde el primer día.' 
+      : 'You are looking for an autonomous DAW developer focused on clean architecture, solid databases, and reliable systems. I am ready to deliver value to your project from day one.';
   } else if (scorePercent >= 50) {
-    badgeColor = 'badge-amber';
-    title = lang === 'es' ? `${scorePercent}% Compatibilidad — Gran Alineación` : `${scorePercent}% Match — Great Alignment`;
+    badgeColor = 'badge-yellow';
+    title = lang === 'es' ? `${scorePercent}% Compatibilidad — Gran Base Común` : `${scorePercent}% Match — Solid Common Ground`;
     desc = lang === 'es'
-      ? 'Coincidimos en la gran mayoría de puntos clave. Revisemos los detalles de tu proyecto.'
-      : 'We match on key requirements. Let\'s discuss your project details!';
+      ? 'Compartimos los principios clave de desarrollo y estabilidad técnica. Cuéntame los requisitos de tu proyecto para ver cómo puedo ayudarte.'
+      : 'We align on the core principles of software reliability and clean execution. Let\'s discuss your project specifics and see how I can help.';
   } else {
     badgeColor = 'badge';
-    title = lang === 'es' ? `${scorePercent}% Compatibilidad — Zona de Riesgo 😉` : `${scorePercent}% Match — Danger Zone 😉`;
+    title = lang === 'es' ? `${scorePercent}% Compatibilidad — Enfoques Diferentes` : `${scorePercent}% Match — Different Approaches`;
     desc = lang === 'es'
-      ? 'Parece que te gustan los deploys caóticos de los viernes... Pero si alguna vez decides apostar por código limpio y fiable, ¡mi contacto está disponible!'
-      : 'It seems you enjoy broken Friday builds... But if you ever decide to switch to reliable engineering, Eduardo\'s email is ready!';
+      ? 'Parece que priorizas otros enfoques de desarrollo... Pero si en algún momento buscas código limpio, arquitectura estructurada y despliegues sin sobresaltos, aquí me tienes.'
+      : 'It seems you prioritize a different development approach... But if you are ever looking for clean code, structured architecture, and zero-drama deployments, I am here.';
   }
 
   container.innerHTML = `
@@ -176,7 +176,7 @@ function renderQuizResults(container, lang, questions) {
       <span class="badge ${badgeColor}" style="margin-bottom: 12px; font-size: 0.8rem;">
         ${scorePercent}% ${lang === 'es' ? 'Puntuación de Compatibilidad' : 'Compatibility Score'}
       </span>
-      <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px;">
+      <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
         ${title}
       </h3>
       <p style="font-size: 0.92rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto 24px auto; line-height: 1.6;">
@@ -185,7 +185,7 @@ function renderQuizResults(container, lang, questions) {
 
       <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
         <a href="#contact" class="btn btn-primary">
-          ${lang === 'es' ? 'Contactar con Eduardo' : 'Get in Touch with Eduardo'}
+          ${lang === 'es' ? 'Contactar Conmigo' : 'Get in Touch with Me'}
         </a>
         <button id="restartQuizBtn" class="btn btn-secondary">
           ${lang === 'es' ? 'Repetir Test' : 'Retake Quiz'}

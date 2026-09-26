@@ -4,6 +4,22 @@ dist/
 build/
 .cache/
 
+# Agent Customizations, Skills & Prompts (Strictly Private)
+.agents/
+.claude/
+.gemini/
+skills/
+.playwright/
+.playwright-cli/
+repomix-output.xml
+
+# 3D Scraps & Binary Models
+gbl/
+media/3d/
+sample.glb
+*.glb
+*.gltf
+
 # UI Main skill / workspace additions
 ui-main/
 

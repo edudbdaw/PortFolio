@@ -10,8 +10,16 @@ import { initCommandPalette } from './commandPalette.js';
 import { initCompatibilityQuiz } from './compatibilityQuiz.js';
 import { initProfileAdapter } from './profileAdapter.js';
 import { showToast } from './toast.js';
+import { initLenisScroll } from './lenisScroll.js';
+import { initExhibitionGallery } from './exhibitionGallery.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Lenis Smooth Scroll Engine & GSAP Sync
+  const lenis = initLenisScroll();
+
+  // Initialize Museum Exhibition Gallery & Spotlight Effects
+  initExhibitionGallery();
+
   // Initialize i18n
   updateDOMTexts();
   initLangButtons();
@@ -21,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTerminal();
   initCommandPalette();
   initCompatibilityQuiz();
-  initScrollProgress();
+  initScrollProgress(lenis);
   initContactModal();
 
   // Initialize stack matrix
@@ -38,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===== Scroll Progress Indicator =====
-function initScrollProgress() {
+function initScrollProgress(lenis) {
   const bar = document.getElementById('scrollProgressBar');
   if (!bar) return;
 
@@ -50,6 +58,9 @@ function initScrollProgress() {
   };
 
   window.addEventListener('scroll', updateProgress, { passive: true });
+  if (lenis && typeof lenis.on === 'function') {
+    lenis.on('scroll', updateProgress);
+  }
   updateProgress();
 }
 
@@ -134,7 +145,7 @@ function initContactModal() {
             statusDiv.style.background = 'rgba(34, 197, 94, 0.1)';
             statusDiv.style.color = '#4ade80';
             statusDiv.style.border = '1px solid rgba(34, 197, 94, 0.2)';
-            statusDiv.textContent = lang === 'es' ? '✔ ¡Mensaje enviado! Eduardo responderá pronto.' : '✔ Message sent! Eduardo will reply shortly.';
+            statusDiv.textContent = lang === 'es' ? '¡Mensaje enviado! Eduardo responderá pronto.' : 'Message sent! Eduardo will reply shortly.';
           }
           form.reset();
 
@@ -162,7 +173,7 @@ function initContactModal() {
           statusDiv.style.background = 'rgba(34, 197, 94, 0.1)';
           statusDiv.style.color = '#4ade80';
           statusDiv.style.border = '1px solid rgba(34, 197, 94, 0.2)';
-          statusDiv.textContent = lang === 'es' ? '✔ Abriendo tu gestor de correo para enviar...' : '✔ Opening your mail client to send...';
+          statusDiv.textContent = lang === 'es' ? 'Abriendo tu gestor de correo para enviar...' : 'Opening your mail client to send...';
         }
       } finally {
         if (submitBtn) {
