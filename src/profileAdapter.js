@@ -11,14 +11,14 @@ const profileConfigs = {
     en: {
       tag: "TAILORED FOR IT CONSULTANCIES & TECH AGENCIES",
       badge: "High-Autonomy Full-Stack Engineer",
-      title: "Production-Ready DAW Engineer for High-Pace Teams",
+      title: "High-Autonomy Full-Stack Engineer for Agile Teams",
       desc: "Fast onboarding, clean architecture in Laravel 12 & Vue.js, structured Git workflows, Docker deployment, and proven problem-solving mindset."
     },
     es: {
       tag: "ADAPTADO PARA CONSULTORAS Y AGENCIAS TECH",
       badge: "Ingeniero Full-Stack de Alta Autonomía",
-      title: "Desarrollador DAW Listo para Equipos de Alto Rendimiento",
-      desc: "Adaptación rápida, arquitectura limpia en Laravel 12 y Vue.js, flujo de trabajo Git estructurado, Docker y capacidad demostrada para resolver retos."
+      title: "Desarrollador Full-Stack Resolutivo para Equipos Ágiles",
+      desc: "Adaptación rápida, arquitectura limpia en Laravel 12 y Vue.js, flujo de trabajo Git estructurado, Docker y capacidad demostrada para resolver retos complejos."
     }
   },
   publicSector: {
@@ -38,15 +38,15 @@ const profileConfigs = {
   cto: {
     en: {
       tag: "TAILORED FOR CTOS & TECH LEADS",
-      badge: "Backend & Database Specialist",
-      title: "Solid SQL Schemas, API Architecture & Performance",
-      desc: "Relational database design in PostgreSQL & MySQL, TCP socket communications, clean RESTful APIs, and zero-panic deployments."
+      badge: "Backend & Systems Architect",
+      title: "Solid SQL Schemas, API Architecture & Telemetry",
+      desc: "Relational database design in PostgreSQL & MySQL, TCP socket communications & hardware telemetry, clean RESTful APIs, Dockerized workflows, and zero-panic deployments."
     },
     es: {
       tag: "ADAPTADO PARA CTOS Y LÍDERES TÉCNICOS",
-      badge: "Especialista en Backend y Bases de Datos",
-      title: "Esquemas SQL Sólidos, Arquitectura API y Rendimiento",
-      desc: "Diseño de bases de datos relacionales en PostgreSQL y MySQL, comunicaciones por socket TCP, APIs RESTful mantenibles y cero pánico en producción."
+      badge: "Arquitecto de Sistemas y Backend",
+      title: "Esquemas SQL Sólidos, Arquitectura API y Telemetría",
+      desc: "Diseño de bases de datos relacionales en PostgreSQL y MySQL, comunicaciones por socket TCP y telemetría de hardware, APIs RESTful mantenibles, Docker y cero incidencias en producción."
     }
   }
 };

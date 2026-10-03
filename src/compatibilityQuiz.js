@@ -31,7 +31,7 @@ const quizData = {
       noReply: "Mmmm... suspicious candidate standards!"
     },
     {
-      q: "Are you looking for a proactive Higher Technician (DAW) ready to deliver results from day 1?",
+      q: "Are you looking for an autonomous Full-Stack Engineer ready to deliver results from day 1?",
       yesLabel: "Exactly what we need",
       noLabel: "No, we prefer 3-month onboarding",
       yesReply: "Perfect fit! Self-driven learning and fast execution guaranteed.",
@@ -61,7 +61,7 @@ const quizData = {
       noReply: "Mmmm... unos estándares de selección algo sospechosos."
     },
     {
-      q: "¿Buscas a un Técnico Superior DAW proactivo listo para aportar valor desde el primer día?",
+      q: "¿Buscas a un Ingeniero Full-Stack autónomo y resolutivo listo para aportar valor desde el primer día?",
       yesLabel: "Justo lo que necesitamos",
       noLabel: "No, preferimos 3 meses de adaptación",
       yesReply: "¡Encaje perfecto! Aprendizaje autónomo y ejecución rápida garantizados.",
@@ -155,8 +155,8 @@ function renderQuizResults(container, lang, questions) {
     badgeColor = 'badge-emerald';
     title = lang === 'es' ? '100% Compatibilidad — ¡Encaje Perfecto!' : '100% Match — Perfect Fit!';
     desc = lang === 'es' 
-      ? 'Buscas a un desarrollador autónomo (Técnico Superior DAW) enfocado en código limpio, bases de datos y arquitectura estable. Estoy listo para aportar valor a tu proyecto desde el primer día.' 
-      : 'You are looking for an autonomous DAW developer focused on clean architecture, solid databases, and reliable systems. I am ready to deliver value to your project from day one.';
+      ? 'Buscas a un ingeniero de software autónomo enfocado en código limpio, bases de datos y arquitectura estable. Estoy listo para aportar valor a tu proyecto desde el primer día.' 
+      : 'You are looking for an autonomous Full-Stack Engineer focused on clean architecture, solid databases, and reliable systems. I am ready to deliver value to your project from day one.';
   } else if (scorePercent >= 50) {
     badgeColor = 'badge-yellow';
     title = lang === 'es' ? `${scorePercent}% Compatibilidad — Gran Base Común` : `${scorePercent}% Match — Solid Common Ground`;

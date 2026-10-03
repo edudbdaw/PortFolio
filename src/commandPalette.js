@@ -133,7 +133,7 @@ function getCommandGroups() {
         {
           id: 'nav-certs',
           label: isEs ? 'Ir a Certificaciones' : 'Go to Certifications',
-          desc: isEs ? 'Azure AZ-900, Cisco CST, Python' : 'Azure AZ-900, Cisco CST, Python',
+          desc: isEs ? 'Azure AZ-900, Cisco CST, Python, Cambridge B2' : 'Azure AZ-900, Cisco CST, Python, Cambridge B2',
           badge: 'SECTION',
           icon: `<svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>`,
           action: () => { window.location.hash = '#certs'; closeCommandPalette(); }

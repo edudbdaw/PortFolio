@@ -113,15 +113,15 @@ function executeCommand(cmd) {
     case 'whoami':
       responseHTML = lang === 'es' ? `
         <div class="terminal-response">
-          <p><strong style="color: #fff;">Eduardo Duran Banegas</strong> — Técnico Superior en DAW (Desarrollo de Aplicaciones Web).</p>
-          <p style="color: #a1a1aa; margin-top: 4px;">Especializado en Laravel 12, PHP 8.4, Vue.js, PostgreSQL/MySQL y Docker.</p>
-          <p style="color: #71717a; margin-top: 4px;">Proyectos destacados: Control remoto de telescopio de 60cm para la Universidad de Aarhus (Dinamarca) y plataforma de digitalización de mercados para el Gobierno de La Palma.</p>
+          <p><strong style="color: #fff;">Eduardo Duran Banegas</strong> — Ingeniero de Software Full-Stack &amp; Systems Developer.</p>
+          <p style="color: #a1a1aa; margin-top: 4px;">Especializado en Laravel 12, Vue.js, PostgreSQL/MySQL, Docker y Flutter.</p>
+          <p style="color: #71717a; margin-top: 4px;">Trayectoria: Telemetría de control para Aarhus University (Dinamarca) y autor publicado en Google Play Store.</p>
         </div>
       ` : `
         <div class="terminal-response">
-          <p><strong style="color: #fff;">Eduardo Duran Banegas</strong> — Full-Stack Web Developer (Higher Technician DAW).</p>
-          <p style="color: #a1a1aa; margin-top: 4px;">Specialized in Laravel 12, PHP 8.4, Vue.js, PostgreSQL/MySQL, and Docker.</p>
-          <p style="color: #71717a; margin-top: 4px;">Featured work: Remote 60cm telescope control system for Aarhus University (Denmark) and market digitalization platform for the Government of La Palma.</p>
+          <p><strong style="color: #fff;">Eduardo Duran Banegas</strong> — Full-Stack Software Engineer &amp; Systems Developer.</p>
+          <p style="color: #a1a1aa; margin-top: 4px;">Specialized in Laravel 12, Vue.js, PostgreSQL/MySQL, Docker, and Flutter.</p>
+          <p style="color: #71717a; margin-top: 4px;">Background: Research telemetry at Aarhus University (Denmark) &amp; published author on Google Play Store.</p>
         </div>
       `;
       break;
@@ -148,9 +148,9 @@ function executeCommand(cmd) {
     case 'ls':
       responseHTML = `
         <div class="terminal-response">
-          <p><span style="color: #4ade80;">1. FUT Remote Telescope</span> — Aarhus University (Denmark/Australia) [PHP, Postgres, Sockets]</p>
-          <p><span style="color: #4ade80;">2. Mercadillos La Palma</span> — Cabildo de La Palma Adoption Plan [Laravel 12, Livewire, MySQL]</p>
-          <p><span style="color: #4ade80;">3. 90Sleep App</span> — R90 Sleep Cycle Alarm App [Flutter, Dart, Closed Beta]</p>
+          <p><span style="color: #4ade80;">1. FUT Remote Telescope</span> — Aarhus University (Denmark/Australia) [PHP 8, Postgres, TCP Sockets]</p>
+          <p><span style="color: #4ade80;">2. 90Sleep App</span> — R90 Sleep Cycle App [Flutter, Dart, Google Play Store]</p>
+          <p><span style="color: #4ade80;">3. Mercadillos La Palma</span> — Cabildo de La Palma Adoption Plan [Laravel 12, Livewire, MySQL]</p>
         </div>
       `;
       break;
@@ -172,6 +172,7 @@ function executeCommand(cmd) {
           <p>✔ <strong style="color: #fff;">Microsoft Azure Fundamentals</strong> (AZ-900)</p>
           <p>✔ <strong style="color: #fff;">Cisco Support Technician</strong> (Cybersecurity Certified)</p>
           <p>✔ <strong style="color: #fff;">Certified Python Developer</strong></p>
+          <p>✔ <strong style="color: #fff;">Cambridge Assessment English</strong> (B2 First / FCE - Professional Proficiency)</p>
         </div>
       `;
       break;

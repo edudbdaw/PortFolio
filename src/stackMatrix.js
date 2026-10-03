@@ -8,8 +8,8 @@ const stackData = [
   { name: 'PHP 8.4', category: 'backend', categoryLabel: 'Backend', icon: 'img/php.svg', projects: ['FUT Telescope', 'Mercadillos', 'Game Catalog'] },
   { name: 'Laravel 12', category: 'backend', categoryLabel: 'Framework', icon: 'img/Laravel.svg.png', projects: ['Mercadillos La Palma'] },
   { name: 'Python', category: 'backend', categoryLabel: 'Backend', icon: 'svg-python', projects: ['Certified Developer', 'Data Scripts'] },
-  { name: 'Java', category: 'backend', categoryLabel: 'Backend', icon: 'img/java2.png', projects: ['DAW Projects'] },
-  { name: 'JavaScript', category: 'backend', categoryLabel: 'Core', icon: 'img/js.png', projects: ['FUT Telescope', 'Los Simpson', 'Notas'] },
+  { name: 'Java', category: 'backend', categoryLabel: 'Backend', icon: 'img/java2.png', projects: ['Enterprise Architecture & APIs'] },
+  { name: 'JavaScript', category: 'backend', categoryLabel: 'Core', icon: 'img/js.png', projects: ['FUT Telescope', 'Interactive Web Platforms'] },
   { name: 'MySQL', category: 'backend', categoryLabel: 'Database', icon: 'img/logo-mysql-170x115.png', projects: ['Mercadillos', 'Game Catalog'] },
   { name: 'PostgreSQL', category: 'backend', categoryLabel: 'Database', icon: 'svg-postgres', projects: ['FUT Telescope'] },
 

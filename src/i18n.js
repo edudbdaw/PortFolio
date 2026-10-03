@@ -15,7 +15,7 @@ const translations = {
 
     // Hero Section
     statusAvailable: 'Available for Full-Stack Roles & Consultancy Projects',
-    heroTag: 'FULL-STACK DEVELOPER · TÉCNICO SUPERIOR DAW',
+    heroTag: 'FULL-STACK ENGINEER · CLOUD & SYSTEMS ARCHITECTURE',
     heroTitleLine1: 'Building clean, reliable',
     heroTitleLine2: 'software & web architectures.',
     heroSubtitle: 'Specialized in Laravel, Vue.js, PostgreSQL, MySQL, and Docker. Developing practical web systems from La Palma to research teams at Aarhus University in Denmark.',
@@ -26,7 +26,7 @@ const translations = {
     // About Section
     aboutTag: 'BACKGROUND & EXPERIENCE',
     aboutTitle: 'Practical execution focused on clean code.',
-    aboutText: "I am a Higher Technician in Web Application Development (DAW). I build practical, scalable web solutions. From building a remote control platform for a 60cm telescope at Aarhus University (Denmark) to developing a multi-role market application for the Government of La Palma, I focus on solid database design, backend logic, and clean user interfaces.",
+    aboutText: "I am a Full-Stack Software Engineer with an analytical background in university engineering and practical web systems. From developing remote control interfaces for a 60cm telescope at Aarhus University (Denmark) to publishing mobile applications on Google Play Store and engineering multi-tenant architectures, I focus on solid database design, critical systems telemetry, and clean, resilient code.",
 
     // Key Highlight Cards
     card1Title: 'International Collaboration',
@@ -42,25 +42,21 @@ const translations = {
     projectsTitleAccent: '· Selected Works',
     projectsSubtitle: 'Production systems, scientific remote platforms, and architectural deployments engineered with precision.',
     opus1Plaque: 'PROJECT 01 · ASTRONOMY & CLOUD INFRASTRUCTURE',
-    opus2Plaque: 'PROJECT 02 · GOVERNMENT DIGITALIZATION & COMMERCE',
-    opus3Plaque: 'PROJECT 03 · MOBILE ARCHITECTURE & SLEEP SCIENCE',
+    opus2Plaque: 'PROJECT 02 · MOBILE ARCHITECTURE & SLEEP SCIENCE',
+    opus3Plaque: 'PROJECT 03 · GOVERNMENT DIGITALIZATION & COMMERCE',
     futTitle: 'FUT — Remote Telescope Control Platform',
     futOrg: 'Aarhus University — Denmark / Australia',
     futDesc: 'Full-stack platform enabling astronomy students and researchers to remotely control a professional 60cm telescope at Mt. Kent Observatory in Australia.',
-    mercadilloTitle: 'Mercadillos La Palma — Market Platform',
-    mercadilloOrg: 'Government Adoption Plan — La Palma',
-    mercadilloDesc: 'Multi-role e-commerce and inventory system (Clients, Vendors, Administrators) for local agricultural markets built with Laravel 12, Livewire, and MySQL.',
     sleepTitle: '90Sleep — R90 Sleep Cycle Alarm App',
     sleepOrg: 'Mobile App (Flutter) · Google Play Store',
     sleepDesc: 'Flutter mobile app (migrated from a Capacitor prototype), 90-minute sleep cycle method, sleep log, statistics, custom settings, and countdown alarm.',
     sleepBadge: 'Google Play Release',
     sleepStoreBtn: 'Get on Google Play',
-    simpsonsTitle: 'Los Simpson Matcher',
-    simpsonsDesc: 'Interactive memory matching game built with vanilla JS and CSS flex grid.',
+    mercadilloTitle: 'Mercadillos La Palma — Market Platform',
+    mercadilloOrg: 'Government Adoption Plan — La Palma',
+    mercadilloDesc: 'Multi-role e-commerce and inventory system (Clients, Vendors, Administrators) for local agricultural markets built with Laravel 12, Livewire, and MySQL.',
     libreriaTitle: 'Game Catalog Platform',
     libreriaDesc: 'Video game catalog application with PHP PDO, SQL filtering, and Tailwind.',
-    notasTitle: 'Fast Notes App',
-    notasDesc: 'Web application for quick notes with local state persistence.',
 
     inspectArchBtn: 'Architecture Diagram',
     simulateDemoBtn: 'Interactive Preview',
@@ -82,6 +78,8 @@ const translations = {
     ciscoSub: 'Cybersecurity Certified · Network & Security',
     pythonTitle: 'Certified Python Developer',
     pythonSub: 'Data Structures & Scripting',
+    cambridgeTitle: 'Cambridge Assessment English',
+    cambridgeSub: 'B2 First (FCE) · Professional Working Proficiency (International Scientific Track)',
 
     // Quiz Section
     quizTag: 'TECHNICAL FIT',
@@ -114,7 +112,7 @@ const translations = {
 
     // Hero Section
     statusAvailable: 'Disponible para Roles Full-Stack y Consultoría',
-    heroTag: 'DESARROLLADOR FULL-STACK · TÉCNICO SUPERIOR DAW',
+    heroTag: 'INGENIERO FULL-STACK · SISTEMAS Y ARQUITECTURA CLOUD',
     heroTitleLine1: 'Desarrollo de software',
     heroTitleLine2: 'y arquitecturas web de precisión.',
     heroSubtitle: 'Especializado en Laravel, Vue.js, PostgreSQL, MySQL y Docker. Creando aplicaciones web reales desde La Palma hasta equipos de investigación en la Universidad de Aarhus (Dinamarca).',
@@ -125,7 +123,7 @@ const translations = {
     // About Section
     aboutTag: 'TRAYECTORIA Y EXPERIENCIA',
     aboutTitle: 'Ejecución práctica enfocada en código limpio.',
-    aboutText: "Soy Técnico Superior en Desarrollo de Aplicaciones Web (DAW). Construyo aplicaciones funcionales y escalables. Desde la plataforma de control remoto de un telescopio de 60cm para la Universidad de Aarhus (Dinamarca) hasta la aplicación multi-rol para el Cabildo de La Palma, mi foco es el diseño de bases de datos sólidas, lógica backend y código mantenible.",
+    aboutText: "Soy Ingeniero Full-Stack con base analítica en ingeniería técnica universitaria y especialización en arquitecturas cliente-servidor. Desde el desarrollo de la plataforma de control y telemetría para un telescopio de 60 cm en Aarhus University (Dinamarca) hasta la publicación de aplicaciones móviles en Google Play Store y el diseño de arquitecturas multi-tenant, me enfoco en el diseño robusto de bases de datos, sistemas críticos y código limpio.",
 
     // Key Highlight Cards
     card1Title: 'Colaboración Internacional',
@@ -141,25 +139,21 @@ const translations = {
     projectsTitleAccent: '· Proyectos Principales',
     projectsSubtitle: 'Sistemas en producción, plataformas científicas remotas y desarrollos arquitectónicos creados con rigor técnico.',
     opus1Plaque: 'PROYECTO 01 · ASTRONOMÍA E INFRAESTRUCTURA CLOUD',
-    opus2Plaque: 'PROYECTO 02 · DIGITALIZACIÓN PÚBLICA Y COMERCIO',
-    opus3Plaque: 'PROYECTO 03 · INGENIERÍA MÓVIL Y CIENCIA DEL SUEÑO',
+    opus2Plaque: 'PROYECTO 02 · INGENIERÍA MÓVIL Y CIENCIA DEL SUEÑO',
+    opus3Plaque: 'PROYECTO 03 · DIGITALIZACIÓN PÚBLICA Y COMERCIO',
     futTitle: 'FUT — Control Remoto de Telescopio',
     futOrg: 'Universidad de Aarhus — Dinamarca / Australia',
     futDesc: 'Plataforma full-stack que permite a estudiantes de astronomía e investigadores controlar remotamente un telescopio profesional de 60cm en el observatorio Mt. Kent (Australia).',
-    mercadilloTitle: 'Mercadillos La Palma — Plataforma de Gestión',
-    mercadilloOrg: 'Plan de Adopción por el Cabildo de La Palma',
-    mercadilloDesc: 'Sistema e-commerce e inventario multi-rol (Clientes, Agricultores, Administradores) para mercados locales construida con Laravel 12, Livewire y MySQL.',
     sleepTitle: '90Sleep — R90 Sleep Cycle Alarm App',
     sleepOrg: 'App Móvil (Flutter) · Google Play Store',
     sleepDesc: 'App móvil Flutter (migrada desde un prototipo Capacitor), método de ciclos de sueño de 90 minutos, registro de sueño, estadísticas, configuración personalizada y alarma con cuenta atrás.',
     sleepBadge: 'Disponible en Google Play',
     sleepStoreBtn: 'Ver en Google Play',
-    simpsonsTitle: 'Juego de Parejas Los Simpson',
-    simpsonsDesc: 'Juego interactivo de memoria visual construido con Javascript vanilla y CSS Flex Grid.',
+    mercadilloTitle: 'Mercadillos La Palma — Plataforma de Gestión',
+    mercadilloOrg: 'Plan de Adopción por el Cabildo de La Palma',
+    mercadilloDesc: 'Sistema e-commerce e inventario multi-rol (Clientes, Agricultores, Administradores) para mercados locales construida con Laravel 12, Livewire y MySQL.',
     libreriaTitle: 'Catálogo de Videojuegos',
     libreriaDesc: 'Plataforma web de catálogo con PHP PDO, consultas SQL relacionales y filtros en Tailwind.',
-    notasTitle: 'Aplicación Notas Rápidas',
-    notasDesc: 'Aplicación web ligera para gestión de notas con persistencia en estado local.',
 
     inspectArchBtn: 'Diagrama de Arquitectura',
     simulateDemoBtn: 'Vista Interactiva',
@@ -181,11 +175,13 @@ const translations = {
     ciscoSub: 'Cybersecurity Certified · Redes y Seguridad',
     pythonTitle: 'Certified Python Developer',
     pythonSub: 'Estructuras de Datos y Scripting',
+    cambridgeTitle: 'Cambridge Assessment English',
+    cambridgeSub: 'B2 First (FCE) · Competencia Profesional en Entorno Internacional',
 
     // Quiz Section
     quizTag: 'COMPATIBILIDAD TÉCNICA',
     quizTitle: '¿Soy el desarrollador que buscas?',
-    quizDesc: 'Un chequeo rápido en 4 preguntas para ver si mis estándares técnicos, autonomía y experiencia DAW encajan con tu proyecto.',
+    quizDesc: 'Un chequeo rápido en 4 preguntas para ver si mis estándares técnicos, autonomía y experiencia en sistemas encajan con tu proyecto.',
 
     // Contact & Footer
     contactTag: 'CONTACTO',
